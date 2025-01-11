@@ -3,39 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Welcome to my portfolio. Explore my work as a solo entrepreneur, AI enthusiast, and innovator.">
+    <title>Blake Schmitt | Portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <nav>
-            <h1>My Portfolio</h1>
-            <ul>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
+        <nav class="navbar">
+            <h1 class="logo">Blake Schmitt</h1>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <h3>Project 1</h3>
-            <p>Description of the first project goes here.</p>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p>
+                I’m Blake Schmitt, a solo entrepreneur pushing the boundaries of AI, automation, and innovation. Explore my projects, achievements, and ideas for the future.
+            </p>
+            <a href="about.html" class="btn">Learn More About Me</a>
         </div>
-        <div class="project-card">
-            <h3>Project 2</h3>
-            <p>Description of the second project goes here.</p>
-        </div>
-        <div class="project-card">
-            <h3>Project 3</h3>
-            <p>Description of the third project goes here.</p>
-        </div>
-        <!-- Add more project cards as needed -->
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <!-- Task Manager -->
+                <div class="project">
+                    <picture>
+                        <source srcset="assets/images/Logo.webp" type="image/webp">
+                        <img src="assets/images/Logo.png" alt="Task Manager Logo" class="project-image">
+                    </picture>
+                    <div class="project-details">
+                        <h3>Task Manager</h3>
+                        <p>
+                            A web-based application to manage tasks efficiently, featuring automation and a sleek design.
+                        </p>
+                        <div class="project-links">
+                            <a href="projects/task-manager.html" class="btn">View Project</a>
+                            <a href="https://github.com/blake2731/Task-Manager" class="btn" target="_blank">GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>
+                Have a question or want to work together? Let’s connect!
+            </p>
+            <div class="contact-links">
+                <a href="contact.html" class="btn">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
-        <p>© 2025 My Portfolio. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Blake Schmitt. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
