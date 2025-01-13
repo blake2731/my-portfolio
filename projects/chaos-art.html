@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about my Chaos Art Generator project, a web app for visualizing chaotic systems through stunning 2D and 3D attractors.">
+    <title>Chaos Art Generator | Projects</title>
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/chaos-art.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Chaos Art Generator</h1>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../projects.html" class="active">Projects</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Details Section -->
+    <main>
+        <section id="chaos-art-details" class="section details-section">
+            <div class="container">
+                <div class="image-container">
+                    <picture>
+                        <source srcset="../assets/images/ChaosArtLogo.webp" type="image/webp">
+                        <img src="../assets/images/ChaosArtLogo.png" alt="Chaos Art Generator Logo" class="project-image">
+                    </picture>
+                </div>
+                <h2 class="section-heading"> Chaos Art Generator</h2>
+                <p class="intro">
+                    The Chaos Art Generator is an interactive tool that visualizes the beauty of chaos theory through stunning 2D and 3D mathematical attractors. Customize parameters, explore vibrant designs, and learn about the underlying mathematics behind each system.
+                </p>
+                
+                <div class="features-tools-wrapper">
+                    <!-- Features Section -->
+                    <div class="features">
+                        <h3>🔑 Key Features</h3>
+                        <ul class="feature-list">
+                            <li>
+                                <i class="fa-solid fa-circle-notch"></i> Visualize Lorenz, Rössler, Henon, and Eclipse Vortex attractors.
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-sliders-h"></i> Adjust parameters in real-time to customize patterns.
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-palette"></i> Stunning gradient-colored plots for 2D and 3D systems.
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-book"></i> Learn the equations and science behind chaos theory.
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-alt"></i> Responsive and modern design for all devices.
+                            </li>
+                        </ul>
+                    </div>
+            
+                    <!-- Technologies Section -->
+                    <div class="tools">
+                        <h3>⚙️ Technologies Used</h3>
+                        <ul class="tools-list">
+                            <li>
+                                <i class="fa-solid fa-code"></i> <strong>Frontend:</strong> Streamlit
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-brain"></i> <strong>Backend:</strong> Python, Matplotlib, NumPy
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-github"></i> <strong>Version Control:</strong> Git, GitHub
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Links Section -->
+                <div class="project-links">
+                    <a href="https://github.com/blake2731/Chaos-Generator" class="btn btn-primary" target="_blank">
+                        <i class="fa-brands fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section gallery-section">
+            <div class="container">
+                <h3 class="gallery-heading">🖼️ Project Screenshots</h3>
+                <div class="gallery-grid">
+                    <a href="../assets/images/EclipseVortex.png" class="lightbox">
+                        <img src="../assets/images/EclipseVortex.png" alt="Eclipse Vortex Attractor" class="gallery-item">
+                    </a>
+                    <a href="../assets/images/Henon.png" class="lightbox">
+                        <img src="../assets/images/Henon.png" alt="Henon Attractor" class="gallery-item">
+                    </a>
+                    <a href="../assets/images/Lorenz.png" class="lightbox">
+                        <img src="../assets/images/Lorenz.png" alt="Lorenz Attractor" class="gallery-item">
+                    </a>
+                    <a href="../assets/images/LorenzExplanation.png" class="lightbox">
+                        <img src="../assets/images/LorenzExplanation.png" alt="Lorenz Explanation" class="gallery-item">
+                    </a>
+                    <a href="../assets/images/Rossler.png" class="lightbox">
+                        <img src="../assets/images/Rossler.png" alt="Rössler Attractor" class="gallery-item">
+                    </a>
+                    <a href="../assets/images/RosslerExplanation.png" class="lightbox">
+                        <img src="../assets/images/RosslerExplanation.png" alt="Rössler Explanation" class="gallery-item">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Blake Schmitt. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
