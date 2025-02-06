@@ -5,26 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn more about my Task Manager project, a web app for managing tasks efficiently with automation and sleek design.">
     <title>Task Manager | Projects</title>
-    <link rel="stylesheet" href="../assets/css/global.css">
-    <link rel="stylesheet" href="../assets/css/task-manager.css">
+    
+    <!-- Absolute Paths for CSS -->
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/task-manager.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+
+     <!--Font Awesome all.min.css-->
+    <link rel="stylesheet" href="../assets/css/all.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <!-- Header Section -->
-    <header>
-        <nav class="navbar">
-            <h1 class="logo">Task Manager</h1>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../projects.html" class="active">Projects</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="navbar-placeholder"></div>
 
     <!-- Project Details Section -->
     <main>
@@ -32,8 +29,8 @@
             <div class="container">
                 <div class="image-container">
                     <picture>
-                        <source srcset="../assets/images/ToDoLogo.webp" type="image/webp">
-                        <img src="../assets/images/ToDoLogo.png" alt="Task Manager Logo" class="project-image">
+                        <source srcset="/assets/images/ToDoLogo.webp" type="image/webp">
+                        <img src="/assets/images/ToDoLogo.png" alt="Task Manager Logo" class="project-image">
                     </picture>
                 </div>
                 <h2 class="section-heading"> Task Manager</h2>
@@ -58,7 +55,9 @@
                             <li>
                                 <i class="fa-solid fa-mobile-alt"></i> Intuitive and responsive design for all devices.
                             </li>
-                               <li> <i class="fa-solid fa-mobile-alt"></i> AI Powered Task Creation</li>
+                            <li> 
+                                <i class="fa-solid fa-mobile-alt"></i> AI Powered Task Creation
+                            </li>
                             <li>
                                 <i class="fa-solid fa-bell"></i> Automated notifications to keep you on track.
                             </li>
@@ -101,14 +100,14 @@
             <div class="container">
                 <h3 class="gallery-heading">📸 Project Screenshots</h3>
                 <div class="gallery-grid">
-                    <a href="../assets/images/Task-Manager.png" class="lightbox">
-                        <img src="../assets/images/Task-Manager.png" alt="Task Manager Overview" class="gallery-item">
+                    <a href="/assets/images/Task-Manager.png" class="lightbox">
+                        <img src="/assets/images/Task-Manager.png" alt="Task Manager Overview" class="gallery-item">
                     </a>
-                    <a href="../assets/images/Complete-Task.png" class="lightbox">
-                        <img src="../assets/images/Complete-Task.png" alt="Task Completion" class="gallery-item">
+                    <a href="/assets/images/Complete-Task.png" class="lightbox">
+                        <img src="/assets/images/Complete-Task.png" alt="Task Completion" class="gallery-item">
                     </a>
-                    <a href="../assets/images/Dark-mode.png" class="lightbox">
-                        <img src="../assets/images/Dark-mode.png" alt="Dark Mode Feature" class="gallery-item">
+                    <a href="/assets/images/Dark-mode.png" class="lightbox">
+                        <img src="/assets/images/Dark-mode.png" alt="Dark Mode Feature" class="gallery-item">
                     </a>
                 </div>
             </div>
@@ -116,12 +115,10 @@
     </main>
 
     <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Blake Schmitt. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
-    <script src="../assets/js/script.js"></script>
+    <!-- Absolute Paths for JS -->
+    <script src="/assets/js/include-footer.js"></script>
+    <script src="/assets/js/include-navbar.js"></script>
 </body>
 </html>

@@ -16,28 +16,7 @@ body {
     margin: 0 auto;
 }
 
-/* Header */
-header .navbar {
-    background: #2575fc;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
-header .navbar a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 15px;
-    transition: color 0.3s;
-}
-
-header .navbar a:hover {
-    color: #ffdb58;
-}
 
 /* Hero Section */
 .hero-section {
@@ -198,14 +177,7 @@ header .navbar a:hover {
     text-decoration: none;
 }
 
-/* Footer */
-footer {
-    background: #2575fc;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

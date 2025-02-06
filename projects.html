@@ -3,108 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore my projects, including Task Manager and other innovative solutions.">
+    <meta name="description" content="Explore my projects, including web applications, AI-powered tools, and automation solutions.">
     <title>Projects | Blake Schmitt</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/projects.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/projects-slider.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav class="navbar">
-            <h1 class="logo">Projects</h1>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header Section Placeholder -->
+    <div id="navbar-placeholder"></div>
 
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <h2>My Projects</h2>
             <p>
-                Dive into my portfolio of innovative projects. From web applications to automation tools, explore how I leverage technology to solve real-world problems.
+                Explore a collection of innovative projects where technology meets creativity. From AI-powered assistants to interactive visualizations, discover how I solve problems with cutting-edge solutions and scalable designs.
             </p>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <main>
-        <section id="projects" class="section projects-section">
-            <div class="container">
-                <h2 class="section-heading">My Projects</h2>
-                <div class="project-grid">
-
-                    <!-- Task Manager Project -->
-                    <div class="project">
-                        <picture>
-                            <source srcset="assets/images/ToDoLogo.webp" type="image/webp">
-                            <img src="assets/images/ToDoLogo.png" alt="Task Manager Logo" class="project-image">
-                        </picture>
-                        <div class="project-details">
-                            <h3>AI Powered Task Manager</h3>
-                            <p>
-                                A web-based application to manage tasks efficiently, featuring automation and a sleek design.
-                            </p>
-                            <div class="project-links">
-                                <a href="projects/task-manager.html" class="btn">View Project</a>
-                                <a href="https://github.com/blake2731/Task-Manager" class="btn" target="_blank">GitHub Repo</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Creative Brainstorming Assistant Project -->
-                    <div class="project">
-                        <picture>
-                            <source srcset="assets/images/CreativeBrainstormLogo.webp" type="image/webp">
-                            <img src="assets/images/CreativeBrainstormLogo.png" alt="Creative Brainstorming Assistant Logo" class="project-image">
-                        </picture>
-                        <div class="project-details">
-                            <h3>Creative Brainstorming Assistant</h3>
-                            <p>
-                                A web-based application to generate creative ideas using AI, tailored for brainstorming sessions and problem-solving.
-                            </p>
-                            <div class="project-links">
-                                <a href="projects/creative-brainstorm.html" class="btn">View Project</a>
-                                <a href="https://github.com/blake2731/creative-brainstorm-AI" class="btn" target="_blank">GitHub Repo</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Chaos Art Project -->
-                    <div class="project">
-                        <picture>
-                            <source srcset="assets/images/ChaosArtLogo.webp" type="image/webp">
-                            <img src="assets/images/ChaosArtLogo.webp" alt="Chaos Art Logo" class="project-image">
-                        </picture>
-                        <div class="project-details">
-                            <h3>Chaos Art Generator</h3>
-                            <p>
-                                An interactive tool that visualizes the beauty of chaos theory through stunning 2D and 3D mathematical attractors. Customize parameters in real-time to create unique, gradient-colored patterns while learning about the underlying equations that drive these mesmerizing designs. Perfect for exploring the intersection of math and art!
-                            </p>
-                            <div class="project-links">
-                                <a href="projects/chaos-art.html" class="btn">View Project</a>
-                                <a href="https://github.com/blake2731/Chaos-Generator" class="btn" target="_blank">GitHub Repo</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- Projects Section using project-slider -->
+    <section id="projects" class="projects-section">
+        <h2 class="section-heading">Explore My Projects</h2>
+        <div id="slider-placeholder"></div>
+    </section>
 
     <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Blake Schmitt. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <!-- JS -->
+    <script src="assets/js/include-navbar.js"></script>
+    <script src="assets/js/include-footer.js"></script>
+    <script src="assets/js/projects-slider.js"></script>
 </body>
 </html>

@@ -1,0 +1,80 @@
+[
+    {
+      "id": "chaos-art-generator",
+      "title": "Chaos Art Generator",
+      "description": "An interactive tool visualizing the beauty of chaos theory through stunning 2D and 3D mathematical attractors.",
+      "features": [
+        "Visualize Lorenz, Rössler, Henon, and Eclipse Vortex attractors",
+        "Adjust parameters in real-time to customize patterns",
+        "Stunning gradient-colored plots for 2D and 3D systems",
+        "Learn the equations and science behind chaos theory",
+        "Responsive and modern design for all devices"
+      ],
+      "technologies": {
+        "Frontend": "Streamlit",
+        "Backend": "Python, Matplotlib, NumPy",
+        "Version Control": "Git, GitHub"
+      },
+      "github": "https://github.com/blake2731/Chaos-Generator",
+      "images": [
+        "assets/images/EclipseVortex.png",
+        "assets/images/Henon.png",
+        "assets/images/Lorenz.png",
+        "assets/images/LorenzExplanation.png",
+        "assets/images/Rossler.png",
+        "assets/images/RosslerExplanation.png"
+      ],
+      "mainImage": "assets/images/ChaosArtLogo.webp"
+    },
+    {
+      "id": "creative-brainstorm-assistant",
+      "title": "Creative Brainstorming Assistant",
+      "description": "A web application designed to generate creative ideas based on user prompts, leveraging AI technology to inspire and solve problems creatively.",
+      "features": [
+        "Generate innovative ideas from simple prompts",
+        "User-friendly interface for seamless brainstorming",
+        "AI-powered insights tailored to your needs",
+        "Responsive and modern design for all devices",
+        "Real-time idea generation for quick solutions"
+      ],
+      "technologies": {
+        "Frontend": "Next.js, Tailwind CSS",
+        "AI": "OpenAI API",
+        "Version Control": "Git, GitHub"
+      },
+      "github": "https://github.com/blake2731/creative-brainstorm-AI",
+      "images": [
+        "assets/images/Brainstorm-Screenshot1.png",
+        "assets/images/Brainstorm-Screenshot2.png"
+      ],
+      "mainImage": "assets/images/CreativeBrainstormLogo.png"
+    },
+    {
+      "id": "task-manager",
+      "title": "AI Powered Task Manager",
+      "description": "A sleek and efficient web application designed to help users manage their tasks effortlessly with AI-powered task creation.",
+      "features": [
+        "Create, update, and delete tasks with ease",
+        "Set task priorities and due dates",
+        "Track task progress and status in real-time",
+        "AI-powered task creation",
+        "Automated notifications to keep you on track",
+        "Responsive design for all devices"
+      ],
+      "technologies": {
+        "Frontend": "HTML, CSS, JavaScript",
+        "Backend": "Node.js, Express.js",
+        "Database": "MongoDB",
+        "AI Integration": "OpenAI API",
+        "Version Control": "Git, GitHub"
+      },
+      "github": "https://github.com/blake2731/Task-Manager",
+      "images": [
+        "assets/images/Task-Manager.png",
+        "assets/images/Complete-Task.png",
+        "assets/images/Dark-mode.png"
+      ],
+      "mainImage": "assets/images/ToDoLogo.png"
+    }
+  ]
+  

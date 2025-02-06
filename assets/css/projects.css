@@ -1,3 +1,5 @@
+/* Project Page-Specific Styles */
+
 /* Projects Section */
 .projects-section {
     padding: 60px 20px;
@@ -95,7 +97,6 @@
     font-size: 1rem;
     padding: 12px 20px;
     border-radius: 8px;
-    text-decoration: none;
     font-weight: bold;
     transition: background 0.3s ease, transform 0.3s ease;
 }
@@ -105,40 +106,8 @@
     transform: translateY(-5px);
 }
 
-/* Hero Section */
-.hero-section {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-    margin-bottom: 40px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.hero-section h2 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.hero-section p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-section h2 {
-        font-size: 2.2rem;
-    }
-
-    .hero-section p {
-        font-size: 1rem;
-    }
-
     .project-grid {
         grid-template-columns: 1fr;
     }
@@ -149,19 +118,6 @@
 }
 
 @media (max-width: 480px) {
-    .hero-section {
-        padding: 40px 15px;
-    }
-
-    .hero-section h2 {
-        font-size: 1.8rem;
-    }
-
-    .btn {
-        font-size: 0.9rem;
-        padding: 8px 15px;
-    }
-
     .project-image {
         width: 70%;
     }
