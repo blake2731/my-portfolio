@@ -45,6 +45,18 @@ function initializeCarousel(totalSlides) {
     const carousel = document.querySelector('.carousel');
     let currentIndex = 0;
 
+    // Ensure that each item has the same width
+    function setCarouselWidth() {
+        const carouselWidth = document.querySelector('.carousel-container').offsetWidth;
+        items.forEach(item => {
+            item.style.width = `${carouselWidth}px`; // Force all items to have the same width
+        });
+    }
+
+    // Run once on load and on resize to prevent drifting
+    setCarouselWidth();
+    window.addEventListener('resize', setCarouselWidth);
+
     document.querySelector('.carousel-controls.prev').addEventListener('click', () => navigateSlide(-1));
     document.querySelector('.carousel-controls.next').addEventListener('click', () => navigateSlide(1));
 
@@ -62,13 +74,15 @@ function initializeCarousel(totalSlides) {
 
     function showSlide(index) {
         currentIndex = index;
-
-        // Calculate new transform position
-        const offset = -index * 100;
+        
+        // Calculate width based on the container
+        const itemWidth = document.querySelector('.carousel-item').offsetWidth;
+        const offset = -index * itemWidth;
+        
         carousel.style.transition = 'transform 0.5s ease'; // Smooth transition
-        carousel.style.transform = `translateX(${offset}%)`;
+        carousel.style.transform = `translateX(${offset}px)`; // Use pixel-based offset for precision
 
-        // Update active state for items and dots
+        // Update active states
         items.forEach((item, i) => item.classList.toggle('active', i === index));
         dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
     }
