@@ -1,11 +1,19 @@
-// assets/js/include-navbar.js
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('/components/navbar.html')
-        .then(response => response.text())
+    // Determine base path dynamically (local vs GitHub Pages)
+    const basePath = window.location.hostname === 'localhost' ? '' : '/my-portfolio';
+
+    // Use correct interpolation for fetch()
+    fetch(`${basePath}/components/navbar.html`)  // Dynamic path works here
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Failed to fetch: ${response.statusText}`);
+            }
+            return response.text();
+        })
         .then(data => {
             document.querySelector('#navbar-placeholder').innerHTML = data;
 
-            // After loading the navbar, dynamically set the active link
+            // Dynamically set the active link
             const currentPath = window.location.pathname.split('/').pop();
             const navLinks = document.querySelectorAll('.nav-links a');
             navLinks.forEach(link => {

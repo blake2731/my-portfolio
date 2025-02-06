@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const projectId = params.get('id');
 
-    fetch('../assets/data/projects.json')
+    fetch(`${basePath}/assets/data/projects.json`)
         .then(response => response.json())
         .then(projects => {
             const project = projects.find(proj => proj.id === projectId);

@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('/components/footer.html')
+    const basePath = window.location.hostname === 'localhost' ? '' : '/my-portfolio';
+
+    fetch(`${basePath}/components/footer.html`)  // Fixed: backticks used correctly
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Network response was not ok: ${response.statusText}`);
