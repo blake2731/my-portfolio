@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Determine base path dynamically (local vs GitHub Pages)
-    const basePath = window.location.hostname === 'localhost' ? '' : '/my-portfolio';
-
-    // Use correct interpolation for fetch()
-    fetch(`${basePath}/components/navbar.html`)  // Dynamic path works here
+    // No need for basePath logic — use relative path directly
+    fetch('components/navbar.html')  // Relative path works in both environments
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Failed to fetch: ${response.statusText}`);

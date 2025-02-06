@@ -6,9 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const basePath = window.location.hostname === 'localhost' ? '' : '/my-portfolio';
-
-    fetch(`${basePath}/assets/data/projects.json`)
+    // Use relative path for fetching projects.json
+    fetch('assets/data/projects.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Failed to fetch: ${response.statusText}`);

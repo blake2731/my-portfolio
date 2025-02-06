@@ -2,8 +2,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const projectId = params.get('id');
 
-    fetch(`${basePath}/assets/data/projects.json`)
-        .then(response => response.json())
+    // Use a relative path for fetching projects.json
+    fetch('assets/data/projects.json')  // No basePath needed
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Failed to fetch projects.json: ${response.statusText}`);
+            }
+            return response.json();
+        })
         .then(projects => {
             const project = projects.find(proj => proj.id === projectId);
 
