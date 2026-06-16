@@ -1,112 +1,122 @@
-/* Hero Section */
-.hero-contact {
-    background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
-    color: var(--text-dark);
-    text-align: center;
-    padding: 80px 20px;
-    margin-bottom: 20px;
-    border-bottom: 5px solid var(--section-border-color);
-    box-shadow: var(--box-shadow);
+.contact-hero {
+    padding: 76px 0 52px;
+    background: linear-gradient(135deg, rgba(15, 118, 110, 0.12), rgba(37, 99, 235, 0.08));
+    border-bottom: 1px solid var(--border);
 }
 
-.hero-contact h2 {
+.contact-hero-layout,
+.contact-form-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+    gap: 36px;
+    align-items: start;
+}
+
+.contact-hero h1,
+.contact-form-layout h2 {
+    margin: 0;
+    color: var(--ink-strong);
     font-size: 3rem;
-    margin-bottom: 15px;
-    color: var(--text-dark);
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    line-height: 1.08;
 }
 
-.hero-contact p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-    color: var(--text-secondary);
+.contact-form-layout h2 {
+    font-size: 2rem;
 }
 
-/* Contact Form Section */
+.contact-hero p:not(.section-label),
+.contact-form-layout p {
+    margin: 16px 0 0;
+    color: var(--muted);
+    font-size: 1.06rem;
+}
+
+.contact-summary {
+    display: grid;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-summary li {
+    display: grid;
+    gap: 4px;
+    padding: 14px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+}
+
+.contact-summary strong {
+    color: var(--ink-strong);
+}
+
+.contact-summary span,
+.contact-summary a {
+    color: var(--muted);
+    overflow-wrap: anywhere;
+}
+
+.contact-summary a:hover {
+    color: var(--accent-strong);
+}
+
+.contact-form-section {
+    background: #ffffff;
+}
+
 .contact-form {
-    background: var(--card-background);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: var(--box-shadow);
-    margin-top: 20px;
+    display: grid;
+    gap: 18px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
 }
 
-.contact-form .form-group {
-    margin-bottom: 20px;
+.form-group {
+    display: grid;
+    gap: 8px;
 }
 
 .contact-form label {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-    display: block;
-    color: var(--text-dark);
+    color: var(--ink-strong);
+    font-weight: 800;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    padding: 12px 13px;
+    color: var(--ink);
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font: inherit;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 8px rgba(95, 201, 250, 0.3);
+    border-color: var(--accent);
     outline: none;
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.14);
 }
 
-/* Submit Button */
 .contact-form button {
-    background: var(--primary-color);
-    color: var(--text-dark);
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 1rem;
-    border: none;
+    border: 0;
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-    box-shadow: var(--box-shadow);
 }
 
-.contact-form button:hover {
-    background: var(--btn-hover-color);
-    transform: scale(1.05);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-contact h2 {
-        font-size: 2.2rem;
+@media (max-width: 860px) {
+    .contact-hero-layout,
+    .contact-form-layout {
+        grid-template-columns: 1fr;
     }
 
-    .hero-contact p {
-        font-size: 1rem;
-    }
-
-    .contact-form {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-contact h2 {
-        font-size: 1.8rem;
-    }
-
-    .hero-contact p {
-        font-size: 0.9rem;
-    }
-
-    .contact-form button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+    .contact-hero h1 {
+        font-size: 2.1rem;
     }
 }

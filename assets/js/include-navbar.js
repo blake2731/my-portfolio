@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // No need for basePath logic — use relative path directly
+    // No need for basePath logic; use relative path directly.
     fetch('components/navbar.html')  // Relative path works in both environments
         .then(response => {
             if (!response.ok) {
@@ -11,10 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('#navbar-placeholder').innerHTML = data;
 
             // Dynamically set the active link
-            const currentPath = window.location.pathname.split('/').pop();
+            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
             const navLinks = document.querySelectorAll('.nav-links a');
             navLinks.forEach(link => {
-                if (link.getAttribute('href') === currentPath) {
+                const linkPath = link.getAttribute('href').split('#')[0] || 'index.html';
+                if (linkPath === currentPath) {
                     link.classList.add('active');
                 }
             });

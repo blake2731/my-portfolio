@@ -3,61 +3,467 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to my portfolio. Explore my work as a solo entrepreneur, AI enthusiast, and innovator.">
-    <title>Blake Schmitt | Portfolio</title>
+    <meta name="description" content="Full stack software engineer building Next.js, TypeScript, AI, analytics, and automation tools.">
+    <meta property="og:title" content="Blake Schmitt | Software Engineer">
+    <meta property="og:description" content="Full stack software engineer building Next.js, TypeScript, AI, analytics, and automation tools.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://blake2731.github.io/my-portfolio/">
+    <meta property="og:site_name" content="Blake Schmitt Portfolio">
+    <title>Blake Schmitt | Software Engineer</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/index.css?v=smallbizz-case-study">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/projects-slider.css">
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="assets/css/all.min.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Header Section Placeholder -->
     <div id="navbar-placeholder"></div>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <div class="container">
-            <h2>Welcome to My Portfolio</h2>
-            <p>
-                Hi, I’m Blake Schmitt—a software developer driven by a passion for mastering diverse programming languages and building scalable, maintainable systems. With a strong foundation in full-stack development, Python, and JavaScript, I specialize in applying methodologies that optimize performance, collaboration, and growth. My love for mathematics and problem-solving fuels my ability to deliver data-driven solutions, while my adaptable mindset ensures I stay ahead of evolving technology landscapes. Explore my portfolio to discover how I can help build robust, innovative projects that scale.
-            </p>
-            <a href="about.html" class="btn">Learn More About Me</a>
-        </div>
-    </section>
+    <main>
+        <section id="hero" class="hero-section" aria-labelledby="hero-title">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <h1 id="hero-title">Blake Schmitt</h1>
+                    <p class="role-line">Software Engineer | Full Stack Developer | Next.js, TypeScript, AI &amp; Automation</p>
+                    <p class="hero-value">
+                        I build full stack applications, analytics platforms, and automation tools that turn messy business workflows into usable software.
+                    </p>
+                    <div class="hero-actions" aria-label="Primary links">
+                        <a class="btn btn-primary" href="#featured-projects">View Projects</a>
+                        <a class="btn btn-secondary" href="https://github.com/blake2731" target="_blank" rel="noopener noreferrer">View GitHub</a>
+                        <a class="btn btn-secondary" href="#contact">Contact Me</a>
+                        <!-- TODO: Add a resume PDF to the repo and enable a Download Resume CTA when the file exists. -->
+                    </div>
+                </div>
 
-    <!-- Projects Section using project-slider -->
-    <section id="projects" class="projects-section">
-        <h2 class="section-heading">My Projects</h2>
-        <div id="slider-placeholder"></div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Have a question or want to work together? Let’s connect!</p>
-            <div class="contact-links">
-                <a href="contact.html" class="btn">Get in Touch</a>
+                <aside class="hero-system" aria-label="SmallBizzWizz product summary">
+                    <div class="system-header">
+                        <span>SmallBizzWizz</span>
+                        <span>Analytics platform</span>
+                    </div>
+                    <div class="metric-row">
+                        <div>
+                            <strong>Ingest</strong>
+                            <span>Spreadsheet data</span>
+                        </div>
+                        <div>
+                            <strong>Normalize</strong>
+                            <span>Financial records</span>
+                        </div>
+                    </div>
+                    <div class="pipeline-card">
+                        <span>Workflow</span>
+                        <ol>
+                            <li>Upload facility spreadsheets</li>
+                            <li>Map and validate financial fields</li>
+                            <li>Generate dashboards and AI narratives</li>
+                        </ol>
+                    </div>
+                    <div class="chart-preview" aria-hidden="true">
+                        <span style="height: 46%"></span>
+                        <span style="height: 68%"></span>
+                        <span style="height: 52%"></span>
+                        <span style="height: 80%"></span>
+                        <span style="height: 61%"></span>
+                    </div>
+                </aside>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer Section -->
+        <section id="featured-projects" class="section featured-section" aria-labelledby="featured-title">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="section-label">Selected work</p>
+                    <h2 id="featured-title">Projects that solve real workflow problems</h2>
+                    <p>These are the strongest examples of my current software engineering direction: analytics, automation, AI-assisted products, and security-minded web development.</p>
+                </div>
+
+                <div class="project-card-grid">
+                    <article class="project-card project-card-featured">
+                        <div class="project-card-top">
+                            <h3>SmallBizzWizz</h3>
+                            <p>A financial analytics platform for skilled nursing facilities.</p>
+                        </div>
+                        <dl class="project-facts">
+                            <div>
+                                <dt>Problem solved</dt>
+                                <dd>Turns messy spreadsheet-based financial workflows into normalized data, dashboards, and insight narratives.</dd>
+                            </div>
+                            <div>
+                                <dt>My role</dt>
+                                <dd>Founder and software engineer designing the product architecture, data flow, and application experience.</dd>
+                            </div>
+                            <div>
+                                <dt>Tech stack</dt>
+                                <dd>Next.js, TypeScript, PostgreSQL, Drizzle ORM, authentication, spreadsheet ingestion, AI-assisted narratives.</dd>
+                            </div>
+                            <div>
+                                <dt>Impact</dt>
+                                <dd>Built to help operators move from manual financial review to faster, clearer decision support.</dd>
+                            </div>
+                        </dl>
+                        <div class="project-actions">
+                            <a class="text-link" href="#smallbizzwizz-case-study">Read Case Study</a>
+                            <!-- TODO: Add the SmallBizzWizz live demo URL when it is public. -->
+                            <!-- TODO: Add the SmallBizzWizz GitHub repo URL if it can be shared. -->
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card-top">
+                            <h3>The Crafty Brother Upload Tool</h3>
+                            <p>A business automation tool for Shopify product creation.</p>
+                        </div>
+                        <dl class="project-facts">
+                            <div>
+                                <dt>Problem solved</dt>
+                                <dd>Converts product images and metadata into upload-ready workflows for Shopify operations.</dd>
+                            </div>
+                            <div>
+                                <dt>My role</dt>
+                                <dd>Designed and developed automation around image handling, metadata preparation, and CSV generation.</dd>
+                            </div>
+                            <div>
+                                <dt>Tech stack</dt>
+                                <dd>JavaScript, CSV workflows, image processing, Shopify product data, business process automation.</dd>
+                            </div>
+                            <div>
+                                <dt>Impact</dt>
+                                <dd>Reduces repetitive listing work from manual hours to a faster, repeatable upload process.</dd>
+                            </div>
+                        </dl>
+                        <div class="project-actions">
+                            <!-- TODO: Add The Crafty Brother Upload Tool live demo, repository, or case study URL if available. -->
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card-top">
+                            <h3>Cybersecurity Research</h3>
+                            <p>Security learning and research focused on web applications and APIs.</p>
+                        </div>
+                        <dl class="project-facts">
+                            <div>
+                                <dt>Problem solved</dt>
+                                <dd>Builds practical security judgment by testing common web and API failure modes.</dd>
+                            </div>
+                            <div>
+                                <dt>My role</dt>
+                                <dd>Researcher and practitioner using structured labs, CTFs, recon tools, and bug bounty practice.</dd>
+                            </div>
+                            <div>
+                                <dt>Tech stack</dt>
+                                <dd>OWASP Top 10, Burp Suite, OWASP ZAP, Amass, Nmap, web application security, API testing.</dd>
+                            </div>
+                            <div>
+                                <dt>Impact</dt>
+                                <dd>Strengthens how I design, review, and ship full stack applications with security in mind.</dd>
+                            </div>
+                        </dl>
+                        <div class="project-actions">
+                            <!-- TODO: Add security writeups, GitHub notes, or selected research links when ready to share. -->
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="smallbizzwizz-case-study" class="section smallbizz-showcase" aria-labelledby="case-study-title">
+            <div class="container smallbizz-shell">
+                <header class="smallbizz-case-hero">
+                    <div class="smallbizz-case-copy">
+                        <p class="section-label">SmallBizzWizz SaaS Case Study</p>
+                        <h2 id="case-study-title">Financial analytics from messy spreadsheets to operational insight.</h2>
+                        <p>
+                            SmallBizzWizz is a financial analytics platform for skilled nursing facilities. It ingests spreadsheet exports, validates and normalizes financial records, stores structured reporting data, and generates insight packets and AI-assisted narratives for dashboard review.
+                        </p>
+                    </div>
+                    <aside class="case-summary-panel" aria-label="SmallBizzWizz project summary">
+                        <dl>
+                            <div>
+                                <dt>Product type</dt>
+                                <dd>SaaS analytics platform</dd>
+                            </div>
+                            <div>
+                                <dt>Domain</dt>
+                                <dd>Skilled nursing facility finance</dd>
+                            </div>
+                            <div>
+                                <dt>My role</dt>
+                                <dd>Product, full stack engineering, data model, AI workflow</dd>
+                            </div>
+                        </dl>
+                    </aside>
+                </header>
+
+                <div class="case-overview-grid">
+                    <article class="case-story-card">
+                        <span>Project Overview</span>
+                        <h3>A workflow for turning facility spreadsheets into decision support</h3>
+                        <p>
+                            The product connects spreadsheet ingestion, data normalization, analytics generation, and narrative reporting into a single authenticated workspace. The goal is to help operators move from raw exports to clear facility-level insights without manually reinterpreting the same data each month.
+                        </p>
+                    </article>
+                    <article class="case-problem-card">
+                        <span>Business Problem</span>
+                        <h3>Financial reporting data often arrives in inconsistent spreadsheet formats requiring significant manual effort to interpret and analyze.</h3>
+                        <p>
+                            SmallBizzWizz addresses that by validating uploads, mapping rows into normalized records, preserving facility and reporting-period lineage, and producing structured insights that can be reused for dashboard views and AI-generated narratives.
+                        </p>
+                    </article>
+                </div>
+
+                <section class="case-block workflow-block" aria-labelledby="workflow-title">
+                    <div class="case-section-heading">
+                        <span>Product Workflow</span>
+                        <h3 id="workflow-title">Upload to analytics pipeline</h3>
+                        <p>The core workflow is designed around repeatable financial review: ingest a spreadsheet once, then reuse the normalized data for analysis, insights, and narrative reporting.</p>
+                    </div>
+                    <ol class="workflow-track" aria-label="SmallBizzWizz product workflow">
+                        <li><span>01</span><strong>Upload Spreadsheet</strong><small>Facility exports enter the system as uploaded files.</small></li>
+                        <li><span>02</span><strong>Validate Data</strong><small>Processing status and diagnostics catch bad or partial inputs.</small></li>
+                        <li><span>03</span><strong>Normalize Records</strong><small>Spreadsheet rows become consistent financial records.</small></li>
+                        <li><span>04</span><strong>Store Structured Data</strong><small>Facility, upload, and reporting-period lineage is preserved.</small></li>
+                        <li><span>05</span><strong>Generate Insights</strong><small>Trends, severity, and supporting metrics are stored.</small></li>
+                        <li><span>06</span><strong>Generate AI Narratives</strong><small>Audience-specific summaries explain what changed and why.</small></li>
+                        <li><span>07</span><strong>Dashboard Review</strong><small>Operators review insights and follow up inside the product.</small></li>
+                    </ol>
+                </section>
+
+                <section class="case-block screens-block" aria-labelledby="screens-title">
+                    <div class="case-section-heading">
+                        <span>Key Application Screens</span>
+                        <h3 id="screens-title">Screenshots that support the product story</h3>
+                        <p>Each screen shows a different part of the SaaS experience: positioning, authentication, upload, analysis, and persisted insight review.</p>
+                    </div>
+                    <div class="screen-gallery">
+                        <figure class="screen-card screen-card-wide">
+                            <img src="assets/images/smallbizzwizz-landing.png" alt="SmallBizzWizz landing page">
+                            <figcaption>
+                                <strong>Landing page</strong>
+                                <span>Establishes the product brand and positions SmallBizzWizz as a practical business-advice and analytics workspace.</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="screen-card">
+                            <img src="assets/images/smallbizzwizz-main.png" alt="SmallBizzWizz authenticated workspace with upload prompt">
+                            <figcaption>
+                                <strong>Dashboard review workspace</strong>
+                                <span>Gives authenticated users a focused place to ask questions, attach spreadsheets, and review generated responses.</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="screen-card">
+                            <img src="assets/images/smallbizzwizz-exampleupload.png" alt="SmallBizzWizz spreadsheet upload and nursing facility analysis">
+                            <figcaption>
+                                <strong>Spreadsheet upload analysis</strong>
+                                <span>Shows nursing-facility demo data being interpreted into facility-level financial observations and follow-up priorities.</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="screen-card">
+                            <img src="assets/images/smallbizzwizz-chathistory.png" alt="SmallBizzWizz chat history with saved analysis sessions">
+                            <figcaption>
+                                <strong>AI insights history</strong>
+                                <span>Preserves prior analysis sessions so operators can return to earlier uploads, questions, and generated narratives.</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="screen-card">
+                            <img src="assets/images/smallbizzwizz-auth.png" alt="SmallBizzWizz sign in screen secured by Clerk">
+                            <figcaption>
+                                <strong>Authenticated SaaS access</strong>
+                                <span>Protects business workflows behind sign-in so financial analysis is scoped to the correct user context.</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="system-architecture" class="case-block architecture-showcase" aria-labelledby="architecture-title">
+                    <div class="case-section-heading">
+                        <span>System Architecture</span>
+                        <h3 id="architecture-title">How data moves through the product</h3>
+                        <p>The system separates ingestion, processing, storage, analytics, and narrative generation so uploaded spreadsheets can become reusable reporting data instead of one-off chat context.</p>
+                    </div>
+                    <div class="architecture-layer-grid">
+                        <article><strong>Data ingestion</strong><span>Spreadsheet uploads capture file metadata, processing stage, and diagnostics.</span></article>
+                        <article><strong>Processing</strong><span>Validation and normalization convert raw rows into consistent financial facts.</span></article>
+                        <article><strong>Storage</strong><span>PostgreSQL tables preserve facility, upload, and reporting-period lineage.</span></article>
+                        <article><strong>Analytics</strong><span>Insight packets store trends, severity, thresholds, and supporting metrics.</span></article>
+                        <article><strong>Narratives</strong><span>AI-assisted reports transform structured insights into plain-English summaries.</span></article>
+                    </div>
+                    <figure class="architecture-diagram architecture-diagram-flow">
+                        <img src="public/portfolio-assets/smallbizzwizz-executive-architecture.svg" alt="Executive architecture flow from facility to upload, reporting period, financial records, insights, and narratives">
+                    </figure>
+                </section>
+
+                <section id="database-design" class="case-block database-showcase" aria-labelledby="database-title">
+                    <div class="case-section-heading">
+                        <span>Database Design</span>
+                        <h3 id="database-title">Relational model for normalized reporting workflows</h3>
+                        <p>The data model was designed to support normalized reporting and reusable analytics. Facility, upload, and reporting-period references appear throughout the analytics tables so each generated insight can be traced back to its source data.</p>
+                    </div>
+                    <div class="database-layout">
+                        <div class="database-entities" aria-label="Core database entities">
+                            <article><strong>Facility</strong><span>Business unit and tenant boundary for financial data.</span></article>
+                            <article><strong>Upload</strong><span>Spreadsheet file metadata, processing status, and diagnostics.</span></article>
+                            <article><strong>ReportingPeriod</strong><span>Canonical reporting month linked to a unique upload.</span></article>
+                            <article><strong>NormalizedFinancialRecord</strong><span>Row-level financial facts used for analytics.</span></article>
+                            <article><strong>InsightPacket</strong><span>Structured trends, severity, and supporting metrics.</span></article>
+                            <article><strong>Narrative</strong><span>Audience-specific AI summaries tied to source lineage.</span></article>
+                        </div>
+                        <figure class="architecture-diagram architecture-diagram-erd">
+                            <img src="public/portfolio-assets/smallbizzwizz-database-erd.svg" alt="Mermaid ERD for SmallBizzWizz facility, upload, reporting period, normalized financial record, insight packet, and narrative tables">
+                        </figure>
+                    </div>
+                </section>
+
+                <div class="case-deep-dive-grid">
+                    <section class="case-block challenges-block" aria-labelledby="challenges-title">
+                        <div class="case-section-heading">
+                            <span>Technical Challenges</span>
+                            <h3 id="challenges-title">Engineering Challenges Solved</h3>
+                        </div>
+                        <ul class="challenge-list">
+                            <li><strong>Inconsistent spreadsheet structures</strong><span>Designed ingestion around messy exports instead of assuming clean, uniform input files.</span></li>
+                            <li><strong>Data normalization</strong><span>Mapped spreadsheet rows into reusable financial records with facility and period context.</span></li>
+                            <li><strong>Financial record mapping</strong><span>Preserved categories, line items, actuals, budgets, variances, and per-patient-day metrics.</span></li>
+                            <li><strong>Insight generation</strong><span>Created structured insight packets with severity, trends, and supporting metrics.</span></li>
+                            <li><strong>AI narrative generation</strong><span>Used normalized context to produce business-readable summaries instead of raw model output.</span></li>
+                            <li><strong>User authentication</strong><span>Protected analysis workflows behind authenticated user sessions.</span></li>
+                            <li><strong>Multi-facility organization</strong><span>Modeled facilities separately so uploads and analytics can be reviewed by business unit.</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="case-block stack-block" aria-labelledby="stack-title">
+                        <div class="case-section-heading">
+                            <span>Technology Stack</span>
+                            <h3 id="stack-title">Full stack implementation</h3>
+                        </div>
+                        <div class="stack-grid" aria-label="SmallBizzWizz technology stack">
+                            <span>Next.js</span>
+                            <span>TypeScript</span>
+                            <span>PostgreSQL</span>
+                            <span>Drizzle ORM</span>
+                            <span>Authentication</span>
+                            <span>Vercel</span>
+                            <span>AI integrations</span>
+                        </div>
+                    </section>
+                </div>
+
+                <section class="case-block impact-block" aria-labelledby="impact-title">
+                    <div class="case-section-heading">
+                        <span>Business Value</span>
+                        <h3 id="impact-title">Value delivered to operators</h3>
+                        <p>SmallBizzWizz turns spreadsheet-heavy review work into a more consistent analytics workflow for leaders who need fast, understandable financial context.</p>
+                    </div>
+                    <div class="impact-grid">
+                        <article><strong>Reduced manual analysis</strong><span>Less time spent reading and reformatting spreadsheet exports.</span></article>
+                        <article><strong>Faster operational insight</strong><span>Upload-driven analysis surfaces facility patterns more quickly.</span></article>
+                        <article><strong>Structured reporting</strong><span>Normalized records make future analytics reusable and traceable.</span></article>
+                        <article><strong>Easier trend identification</strong><span>Insight packets highlight variance, trend direction, and severity.</span></article>
+                        <article><strong>Consistent decision support</strong><span>AI narratives translate financial data into clearer next-step context.</span></article>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills-section" aria-labelledby="skills-title">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="section-label">Technical range</p>
+                    <h2 id="skills-title">Skills grouped by the work I do</h2>
+                </div>
+                <div class="skills-grid">
+                    <article>
+                        <h3>Frontend</h3>
+                        <p>TypeScript, JavaScript, React, Next.js, HTML, CSS</p>
+                    </article>
+                    <article>
+                        <h3>Backend</h3>
+                        <p>Node.js, APIs, PostgreSQL, Drizzle ORM, SQL</p>
+                    </article>
+                    <article>
+                        <h3>AI &amp; Automation</h3>
+                        <p>AI applications, workflow automation, data processing, business automation</p>
+                    </article>
+                    <article>
+                        <h3>Security</h3>
+                        <p>OWASP Top 10, Burp Suite, OWASP ZAP, Nmap, web application security</p>
+                    </article>
+                    <article>
+                        <h3>Tools</h3>
+                        <p>Git, GitHub, Vercel, Cloudinary</p>
+                        <!-- TODO: Confirm Cloudinary usage and remove it if it is not part of the current project stack. -->
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section experience-section" aria-labelledby="experience-title">
+            <div class="container experience-layout">
+                <div class="section-intro">
+                    <p class="section-label">Experience</p>
+                    <h2 id="experience-title">Software work with business context</h2>
+                </div>
+                <div class="timeline">
+                    <article>
+                        <span>Founder &amp; Software Engineer</span>
+                        <h3>SmallBizzWizz</h3>
+                        <p>Building a full stack analytics product for financial ingestion, normalization, dashboards, and AI-assisted business narratives.</p>
+                    </article>
+                    <article>
+                        <span>Software Developer</span>
+                        <h3>The Crafty Brother</h3>
+                        <p>Developed automation for Shopify product creation workflows, including metadata preparation, CSV generation, and image workflow support.</p>
+                    </article>
+                    <article>
+                        <span>Cyber Security Engineer</span>
+                        <h3>Freelance</h3>
+                        <p>Practicing web application and API security research with OWASP tooling, recon workflows, CTFs, and bug bounty-style testing.</p>
+                    </article>
+                    <article>
+                        <span>Earlier experience</span>
+                        <h3>Operations and customer-facing roles</h3>
+                        <p>Built useful foundations in customer communication, leadership, operational problem solving, and translating messy needs into practical action.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about-section" aria-labelledby="about-title">
+            <div class="container narrow-container">
+                <p class="section-label">About</p>
+                <h2 id="about-title">I build software close to real users and real workflows.</h2>
+                <p>
+                    I'm a full stack software engineer with a B.S. in Computer Science, Summa Cum Laude, from Southern New Hampshire University. My work centers on practical web applications, business automation, AI-assisted analytics, and security-aware engineering.
+                </p>
+                <p>
+                    I like problems where the software has to make a messy workflow clearer: uploading spreadsheets, cleaning operational data, generating useful views, or reducing repetitive business tasks. That same focus carries into my cybersecurity research, where I study how real web applications and APIs fail so I can build stronger systems.
+                </p>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+            <div class="container contact-layout">
+                <div>
+                    <p class="section-label">Contact</p>
+                    <h2 id="contact-title">Open to remote software engineering roles.</h2>
+                    <p>I'm based in Galax, Virginia, United States, and available for remote full stack engineering work.</p>
+                </div>
+                <ul class="contact-list">
+                    <!-- TODO: Replace this with a mailto link when Blake provides a preferred public email address. -->
+                    <li><strong>Email</strong><a href="contact.html#contact-form-section">Use contact form</a></li>
+                    <li><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/blake2731/" target="_blank" rel="noopener noreferrer">linkedin.com/in/blake2731</a></li>
+                    <li><strong>GitHub</strong><a href="https://github.com/blake2731" target="_blank" rel="noopener noreferrer">github.com/blake2731</a></li>
+                    <li><strong>Location</strong><span>Galax, Virginia, United States</span></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
     <div id="footer-placeholder"></div>
 
-    <!-- JS -->
     <script src="assets/js/include-footer.js"></script>
     <script src="assets/js/include-navbar.js"></script>
-    <script src="assets/js/projects-slider.js"></script>
 </body>
 </html>

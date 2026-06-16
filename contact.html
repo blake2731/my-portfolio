@@ -3,58 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get in touch with me through the contact page of my portfolio.">
-    <title>Contact Me | Blake Schmitt</title>
+    <meta name="description" content="Contact Blake Schmitt for remote software engineering roles focused on full stack development, AI, analytics, and automation.">
+    <meta property="og:title" content="Contact | Blake Schmitt">
+    <meta property="og:description" content="Contact Blake Schmitt for remote full stack software engineering opportunities.">
+    <meta property="og:type" content="website">
+    <title>Contact | Blake Schmitt</title>
 
-    <!-- Absolute Paths for CSS -->
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
-
-    <!--Font Awesome all.min.css-->
     <link rel="stylesheet" href="assets/css/all.min.css">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Header Section Placeholder -->
     <div id="navbar-placeholder"></div>
 
-
-    <!-- Hero Section -->
-    <section class="hero-contact">
-        <div class="container">
-            <h2>Let’s Connect!</h2>
-            <p>
-                Have a question, a project idea, or just want to say hi? Use the form below, and I’ll get back to you as soon as I can!
-            </p>
-        </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section id="contact-form-section">
-        <div class="container">
-            <form action="https://formspree.io/f/xnnnlbvb" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <main>
+        <section class="contact-hero">
+            <div class="container contact-hero-layout">
+                <div>
+                    <p class="section-label">Contact</p>
+                    <h1>Remote full stack software engineering</h1>
+                    <p>I am based in Galax, Virginia, United States, and available for remote software engineering roles involving web applications, automation, analytics, AI, and security-aware development.</p>
                 </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" placeholder="Write your message here" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
+                <ul class="contact-summary">
+                    <!-- TODO: Replace this with a mailto link when Blake provides a preferred public email address. -->
+                    <li><strong>Email</strong><a href="#contact-form-section">Use contact form below</a></li>
+                    <li><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/blake2731/" target="_blank" rel="noopener noreferrer">linkedin.com/in/blake2731</a></li>
+                    <li><strong>GitHub</strong><a href="https://github.com/blake2731" target="_blank" rel="noopener noreferrer">github.com/blake2731</a></li>
+                    <li><strong>Location</strong><span>Galax, Virginia, United States</span></li>
+                </ul>
+            </div>
+        </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <div id="footer-placeholder"></div>
+        <section id="contact-form-section" class="section contact-form-section" aria-labelledby="contact-form-title">
+            <div class="container contact-form-layout">
+                <div>
+                    <h2 id="contact-form-title">Send a message</h2>
+                    <p>Use the form for hiring conversations, project discussions, or follow-up questions.</p>
+                </div>
+                <form action="https://formspree.io/f/xnnnlbvb" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="email">Your email</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
 
     <script src="assets/js/include-footer.js"></script>
     <script src="assets/js/include-navbar.js"></script>

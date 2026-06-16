@@ -1,106 +1,103 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const sliderPlaceholder = document.getElementById('slider-placeholder');
+    const projectContainer = document.getElementById('slider-placeholder');
 
-    if (!sliderPlaceholder) {
-        console.error("Slider placeholder not found! Ensure the ID is correct.");
+    if (!projectContainer) {
         return;
     }
 
     fetch('assets/data/projects.json')
-        .then(response => {
+        .then((response) => {
             if (!response.ok) {
-                throw new Error(`Failed to fetch: ${response.statusText}`);
+                throw new Error(`Failed to fetch projects: ${response.statusText}`);
             }
             return response.json();
         })
-        .then(projects => {
-            if (!projects.length) {
-                console.error("No projects found in JSON data.");
-                return;
-            }
-
-            sliderPlaceholder.innerHTML = `
-                <div class="carousel-container">
-                    <button class="carousel-controls prev">&#8249;</button>
-                    <div class="carousel" id="project-carousel">
-                        ${projects.map((project, index) => `
-                            <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                                <img src="${project.mainImage.startsWith('assets/') ? project.mainImage : `assets/images/${project.mainImage}`}" alt="${project.title}">
-                                <h3>${project.title}</h3>
-                                <p>${project.description}</p>
-                                <div class="project-links">
-                                    <a href="${project.id ? `project.html?id=${project.id}` : '#'}" class="btn">View Project</a>
-                                    <a href="${project.github || '#'}" class="btn" target="_blank">GitHub Repo</a>
-                                </div>
-                            </div>
-                        `).join('')}
-                    </div>
-                    <button class="carousel-controls next">&#8250;</button>
-                    <div class="carousel-indicators" id="carousel-dots">
-                        ${projects.map((_, index) => `
-                            <span class="dot ${index === 0 ? 'active' : ''}" data-slide="${index}"></span>
-                        `).join('')}
-                    </div>
+        .then((projects) => {
+            projectContainer.innerHTML = `
+                <div class="project-list">
+                    ${projects.map(renderProjectCard).join('')}
                 </div>
             `;
-
-            initializeCarousel(projects.length);
         })
-        .catch(error => console.error("Error fetching project data:", error));
+        .catch((error) => {
+            projectContainer.innerHTML = '<p class="project-load-error">Projects could not be loaded right now.</p>';
+            console.error('Error fetching project data:', error);
+        });
 });
 
-function initializeCarousel(totalSlides) {
-    const items = document.querySelectorAll('.carousel-item');
-    const dots = document.querySelectorAll('.dot');
-    const prevButton = document.querySelector('.carousel-controls.prev');
-    const nextButton = document.querySelector('.carousel-controls.next');
-    let currentIndex = 0;
+function renderProjectCard(project) {
+    const links = project.links || {};
 
-    // Set up carousel width dynamically
-    function setCarouselWidth() {
-        const carouselWidth = document.querySelector('.carousel-container').offsetWidth;
-        items.forEach(item => {
-            item.style.width = `${carouselWidth}px`;
-        });
+    // TODO: Fill missing live/GitHub/case study URLs in assets/data/projects.json when they are available.
+    const externalLinks = [
+        links.live ? renderExternalLink(links.live, 'Live Demo') : '',
+        links.github ? renderExternalLink(links.github, 'GitHub') : '',
+        links.caseStudy ? `<a class="text-link" href="${escapeAttribute(links.caseStudy)}">Case Study</a>` : ''
+    ].filter(Boolean).join('');
+
+    return `
+        <article class="project-list-card">
+            ${renderProjectVisual(project)}
+            <div class="project-list-content">
+                <h3>${escapeHtml(project.title)}</h3>
+                <p>${escapeHtml(project.summary || project.description || '')}</p>
+                <dl>
+                    <div>
+                        <dt>Problem</dt>
+                        <dd>${escapeHtml(project.problem || '')}</dd>
+                    </div>
+                    <div>
+                        <dt>Role</dt>
+                        <dd>${escapeHtml(project.role || '')}</dd>
+                    </div>
+                    <div>
+                        <dt>Impact</dt>
+                        <dd>${escapeHtml(project.impact || '')}</dd>
+                    </div>
+                </dl>
+                <div class="project-links">
+                    <a class="btn btn-primary" href="project.html?id=${encodeURIComponent(project.id)}">View Details</a>
+                    ${externalLinks}
+                </div>
+            </div>
+        </article>
+    `;
+}
+
+function renderProjectVisual(project) {
+    if (project.mainImage) {
+        return `<img src="${escapeAttribute(project.mainImage)}" alt="${escapeAttribute(project.title)}" class="project-list-image" loading="lazy">`;
     }
 
-    // Run once on load and on resize to prevent layout issues
-    setCarouselWidth();
-    window.addEventListener('resize', setCarouselWidth);
+    const title = escapeHtml(project.title);
+    const tech = project.technologies ? Object.values(project.technologies).slice(0, 3) : [];
 
-    // Navigation functions
-    prevButton.addEventListener('click', () => navigateSlide(-1));
-    nextButton.addEventListener('click', () => navigateSlide(1));
+    return `
+        <div class="project-visual" aria-label="${escapeAttribute(project.title)} project visual summary">
+            <span>${title}</span>
+            <div class="visual-lines" aria-hidden="true">
+                <i></i><i></i><i></i>
+            </div>
+            <ul>
+                ${tech.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}
+            </ul>
+        </div>
+    `;
+}
 
-    dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-            const index = parseInt(dot.getAttribute('data-slide'));
-            showSlide(index);
-        });
-    });
+function renderExternalLink(url, label) {
+    return `<a class="text-link" href="${escapeAttribute(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+}
 
-    function navigateSlide(step) {
-        currentIndex = (currentIndex + step + totalSlides) % totalSlides;
-        showSlide(currentIndex);
-    }
+function escapeHtml(value) {
+    return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+}
 
-    function showSlide(index) {
-        currentIndex = index;
-
-        // Calculate offset based on slide width
-        const itemWidth = document.querySelector('.carousel-item').offsetWidth;
-        const offset = -index * itemWidth;
-
-        // Animate the carousel sliding effect
-        const carousel = document.querySelector('#project-carousel');
-        carousel.style.transition = 'transform 0.5s ease';
-        carousel.style.transform = `translateX(${offset}px)`;
-
-        // Update active states for items and dots
-        items.forEach((item, i) => item.classList.toggle('active', i === index));
-        dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
-    }
-
-    // Initialize by showing the first slide
-    showSlide(currentIndex);
+function escapeAttribute(value) {
+    return escapeHtml(value).replace(/`/g, '&#096;');
 }

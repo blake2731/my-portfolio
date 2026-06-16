@@ -1,104 +1,104 @@
 [
   {
-      "id": "chaos-art-generator",
-      "title": "Chaos Art Generator",
-      "description": "An interactive tool visualizing the beauty of chaos theory through stunning 2D and 3D mathematical attractors.",
-      "features": [
-          "Visualize Lorenz, Rössler, Henon, and Eclipse Vortex attractors",
-          "Adjust parameters in real-time to customize patterns",
-          "Stunning gradient-colored plots for 2D and 3D systems",
-          "Learn the equations and science behind chaos theory",
-          "Responsive and modern design for all devices"
-      ],
-      "technologies": {
-          "Frontend": "Streamlit",
-          "Backend": "Python, Matplotlib, NumPy",
-          "Version Control": "Git, GitHub"
-      },
-      "github": "https://github.com/blake2731/Chaos-Generator",
-      "images": [
-          "assets/images/EclipseVortex.png",
-          "assets/images/Henon.png",
-          "assets/images/Lorenz.png",
-          "assets/images/LorenzExplanation.png",
-          "assets/images/Rossler.png",
-          "assets/images/RosslerExplanation.png"
-      ],
-      "mainImage": "assets/images/ChaosArtLogo.webp"
+    "id": "smallbizzwizz",
+    "title": "SmallBizzWizz",
+    "summary": "A financial analytics platform for skilled nursing facilities.",
+    "description": "SmallBizzWizz ingests facility spreadsheets, normalizes financial data, presents dashboard views, and supports AI-assisted business narratives.",
+    "problem": "Financial review workflows can depend on messy spreadsheet exports, manual cleanup, and repeated interpretation before leaders can act on the data.",
+    "role": "Founder and software engineer responsible for product direction, application architecture, data flow, and implementation.",
+    "impact": "Built to help operators move from manual financial review to faster, clearer decision support.",
+    "features": [
+      "Spreadsheet ingestion and validation",
+      "Financial data normalization",
+      "Dashboard views for operational review",
+      "Insight generation and AI-assisted business narratives",
+      "Authenticated user workflows"
+    ],
+    "technologies": {
+      "Frontend": "Next.js, TypeScript, React",
+      "Backend": "Node.js, Drizzle ORM, APIs",
+      "Database": "PostgreSQL, SQL",
+      "Product": "Authentication, spreadsheet ingestion, financial dashboards, AI-assisted narratives"
+    },
+    "links": {
+      "caseStudy": "index.html#smallbizzwizz-case-study",
+      "github": "",
+      "live": ""
+    },
+    "linkTodos": [
+      "TODO: Add SmallBizzWizz live demo URL when public.",
+      "TODO: Add SmallBizzWizz GitHub repo URL if it can be shared.",
+      "TODO: Add real product screenshots when available."
+    ],
+    "images": [
+      "assets/images/smallbizzwizz-landing.png",
+      "assets/images/smallbizzwizz-main.png",
+      "assets/images/smallbizzwizz-exampleupload.png",
+      "assets/images/smallbizzwizz-chathistory.png",
+      "assets/images/smallbizzwizz-auth.png"
+    ]
   },
   {
-      "id": "creative-brainstorm-assistant",
-      "title": "Creative Brainstorming Assistant",
-      "description": "A web application designed to generate creative ideas based on user prompts, leveraging AI technology to inspire and solve problems creatively.",
-      "features": [
-          "Generate innovative ideas from simple prompts",
-          "User-friendly interface for seamless brainstorming",
-          "AI-powered insights tailored to your needs",
-          "Responsive and modern design for all devices",
-          "Real-time idea generation for quick solutions"
-      ],
-      "technologies": {
-          "Frontend": "Next.js, Tailwind CSS",
-          "AI": "OpenAI API",
-          "Version Control": "Git, GitHub"
-      },
-      "github": "https://github.com/blake2731/creative-brainstorm-AI",
-      "images": [
-          "assets/images/Brainstorm-Screenshot1.png",
-          "assets/images/Brainstorm-Screenshot2.png"
-      ],
-      "mainImage": "assets/images/CreativeBrainstormLogo.png"
+    "id": "crafty-brother-upload-tool",
+    "title": "The Crafty Brother Upload Tool",
+    "summary": "A business automation tool for Shopify product creation.",
+    "description": "The upload tool helps convert product images and metadata into upload-ready workflows for Shopify operations.",
+    "problem": "Product listing work can become repetitive and error-prone when images, metadata, and CSV upload steps are handled manually.",
+    "role": "Software developer designing automation around image workflow, metadata preparation, CSV generation, and Shopify product operations.",
+    "impact": "Reduces repetitive product listing work from manual hours to a faster, repeatable workflow.",
+    "features": [
+      "Product metadata preparation",
+      "CSV generation for upload workflows",
+      "Image workflow support",
+      "Shopify operations support",
+      "Business process automation"
+    ],
+    "technologies": {
+      "Automation": "CSV generation, workflow scripting, data transformation",
+      "Commerce": "Shopify product data and upload workflows",
+      "Frontend": "HTML, CSS, JavaScript where applicable",
+      "Process": "Image handling, repeatable business workflows"
+    },
+    "links": {
+      "caseStudy": "",
+      "github": "",
+      "live": ""
+    },
+    "linkTodos": [
+      "TODO: Add live demo, repository, or case study URL if available.",
+      "TODO: Add approved screenshots or workflow captures."
+    ],
+    "images": []
   },
   {
-      "id": "my-portfolio",
-      "title": "Personal Portfolio Website",
-      "description": "A dynamic and fully responsive portfolio showcasing my projects. Built with JSON-driven project loading, reusable components, and an interactive project carousel.",
-      "features": [
-          "JSON-based project loader",
-          "Responsive carousel navigation",
-          "Custom-built navbar and footer components",
-          "Optimized images and lazy loading",
-          "Interactive project pages"
-      ],
-      "technologies": {
-          "Frontend": "HTML, CSS, JavaScript",
-          "Backend": "JSON-based dynamic data",
-          "Version Control": "Git, GitHub"
-      },
-      "github": "https://github.com/yourusername/your-portfolio-repo",
-      "images": [
-          "assets/images/Carousel.png",
-          "assets/images/Hero.png",
-          "assets/images/Tree1.png",
-          "assets/images/Tree2.png"
-      ],
-      "mainImage": "assets/images/Tree1.png"
-  },
-  {
-      "id": "task-manager",
-      "title": "AI Powered Task Manager",
-      "description": "A sleek and efficient web application designed to help users manage their tasks effortlessly with AI-powered task creation.",
-      "features": [
-          "Create, update, and delete tasks with ease",
-          "Set task priorities and due dates",
-          "Track task progress and status in real-time",
-          "AI-powered task creation",
-          "Automated notifications to keep you on track",
-          "Responsive design for all devices"
-      ],
-      "technologies": {
-          "Frontend": "HTML, CSS, JavaScript",
-          "Backend": "Node.js, Express.js",
-          "Database": "MongoDB",
-          "AI Integration": "OpenAI API",
-          "Version Control": "Git, GitHub"
-      },
-      "github": "https://github.com/blake2731/Task-Manager",
-      "images": [
-          "assets/images/Task-Manager.png",
-          "assets/images/Complete-Task.png",
-          "assets/images/Dark-mode.png"
-      ],
-      "mainImage": "assets/images/ToDoLogo.png"
+    "id": "cybersecurity-research",
+    "title": "Cybersecurity Research",
+    "summary": "Security learning and research focused on web applications and APIs.",
+    "description": "A practical security research track covering OWASP Top 10, API testing, recon tooling, CTFs, and bug bounty-style practice.",
+    "problem": "Modern full stack applications need security judgment around authentication, input handling, API behavior, recon exposure, and common web vulnerabilities.",
+    "role": "Security researcher and practitioner building hands-on skill with structured labs, tooling, and web application testing.",
+    "impact": "Improves how I design, review, and ship full stack applications with security risks in mind.",
+    "features": [
+      "OWASP Top 10 practice",
+      "Web application and API testing",
+      "Burp Suite and OWASP ZAP workflows",
+      "Recon practice with Amass and Nmap",
+      "CTFs and bug bounty preparation"
+    ],
+    "technologies": {
+      "Security": "OWASP Top 10, Burp Suite, OWASP ZAP",
+      "Recon": "Amass, Nmap",
+      "Practice": "CTFs, bug bounty methodology",
+      "Application focus": "Web applications, APIs, authentication, input validation"
+    },
+    "links": {
+      "caseStudy": "",
+      "github": "",
+      "live": ""
+    },
+    "linkTodos": [
+      "TODO: Add public writeups, GitHub notes, or selected research links when ready."
+    ],
+    "images": []
   }
 ]

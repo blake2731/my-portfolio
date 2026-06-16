@@ -1,0 +1,89 @@
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#ffffff", "primaryBorderColor": "#0f766e", "primaryTextColor": "#0b1220", "lineColor": "#2563eb", "secondaryColor": "#eef4f7", "tertiaryColor": "#f6f8fb", "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"}}}%%
+erDiagram
+    FACILITY ||--o{ UPLOAD : "facility_id cascade"
+    FACILITY ||--o{ REPORTING_PERIOD : "facility_id cascade"
+    FACILITY ||--o{ NORMALIZED_FINANCIAL_RECORD : "facility_id cascade"
+    FACILITY ||--o{ INSIGHT_PACKET : "facility_id cascade"
+    FACILITY ||--o{ NARRATIVE : "facility_id cascade"
+
+    UPLOAD ||--o| REPORTING_PERIOD : "upload_id unique cascade"
+    UPLOAD ||--o{ NORMALIZED_FINANCIAL_RECORD : "upload_id cascade"
+    UPLOAD ||--o{ INSIGHT_PACKET : "upload_id cascade"
+    UPLOAD ||--o{ NARRATIVE : "upload_id cascade"
+
+    REPORTING_PERIOD ||--o{ NORMALIZED_FINANCIAL_RECORD : "reporting_period_id cascade"
+    REPORTING_PERIOD ||--o{ INSIGHT_PACKET : "reporting_period_id cascade"
+    REPORTING_PERIOD ||--o{ NARRATIVE : "reporting_period_id cascade"
+
+    FACILITY {
+        uuid id PK
+        text user_id
+        text name
+    }
+
+    UPLOAD {
+        uuid id PK
+        uuid facility_id FK
+        text user_id
+        text file_name
+        text status
+        text processing_stage
+        jsonb diagnostics
+    }
+
+    REPORTING_PERIOD {
+        uuid id PK
+        uuid facility_id FK
+        uuid upload_id FK
+        text label
+        text period_key
+        date month_start
+        text source_period_label
+    }
+
+    NORMALIZED_FINANCIAL_RECORD {
+        uuid id PK
+        uuid facility_id FK
+        uuid upload_id FK
+        uuid reporting_period_id FK
+        text sheet_name
+        integer row_number
+        text category
+        text subcategory
+        text line_item
+        text period
+        text report_type
+        float actual
+        float budget
+        float variance
+        boolean is_total
+    }
+
+    INSIGHT_PACKET {
+        uuid id PK
+        uuid facility_id FK
+        uuid upload_id FK
+        uuid reporting_period_id FK
+        text insight_key
+        text type
+        text severity
+        text category
+        text line_item
+        text period
+        text title
+        text trend_direction
+        jsonb supporting_metrics
+    }
+
+    NARRATIVE {
+        uuid id PK
+        uuid facility_id FK
+        uuid upload_id FK
+        uuid reporting_period_id FK
+        text audience
+        text status
+        text model
+        jsonb prompt_context
+        text narrative_text
+        jsonb supporting_insight_ids
+    }
