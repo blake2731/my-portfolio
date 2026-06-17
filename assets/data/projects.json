@@ -18,7 +18,7 @@
       "Frontend": "Next.js, TypeScript, React",
       "Backend": "Node.js, Drizzle ORM, APIs",
       "Database": "PostgreSQL, SQL",
-      "Product": "Authentication, spreadsheet ingestion, financial dashboards, AI-assisted narratives"
+      "Product": "Clerk Auth, spreadsheet ingestion, financial dashboards, AI-assisted narratives"
     },
     "links": {
       "caseStudy": "index.html#smallbizzwizz-case-study",
@@ -72,11 +72,11 @@
   },
   {
     "id": "cybersecurity-research",
-    "title": "Cybersecurity Research",
-    "summary": "Security learning and research focused on web applications and APIs.",
+    "title": "Application Security Research",
+    "summary": "Security research focused on web applications and APIs.",
     "description": "A practical security research track covering OWASP Top 10, API testing, recon tooling, CTFs, and bug bounty-style practice.",
     "problem": "Modern full stack applications need security judgment around authentication, input handling, API behavior, recon exposure, and common web vulnerabilities.",
-    "role": "Security researcher and practitioner building hands-on skill with structured labs, tooling, and web application testing.",
+    "role": "Application Security Researcher building hands-on skill with structured labs, tooling, and web application testing.",
     "impact": "Improves how I design, review, and ship full stack applications with security risks in mind.",
     "features": [
       "OWASP Top 10 practice",
