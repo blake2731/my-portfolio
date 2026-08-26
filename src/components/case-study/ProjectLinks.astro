@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  project: CollectionEntry<"projects">;
+}
+
+const { project } = Astro.props;
+const links: Array<{ label: string; href: string }> = [];
+
+if (project.data.links?.repository) links.push({ label: "Source", href: project.data.links.repository });
+if (project.data.links?.live) links.push({ label: "Live product", href: project.data.links.live });
+if (project.data.links?.marketplace) links.push({ label: "Marketplace", href: project.data.links.marketplace });
+if (project.data.links?.demo) links.push({ label: "Demo", href: project.data.links.demo });
+if (project.data.links?.report) links.push({ label: "Report", href: project.data.links.report });
+---
+
+{links.length > 0 && (
+  <nav class="proof-links" aria-label={`${project.data.title} proof links`}>
+    {links.map((link) => (
+      <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+    ))}
+  </nav>
+)}

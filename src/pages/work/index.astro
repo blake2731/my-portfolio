@@ -1,9 +1,12 @@
 ---
 import { getCollection } from "astro:content";
 
+import ProjectCard from "../../components/ProjectCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-const projects = (await getCollection("projects")).filter(({ data }) => data.tier !== "lab");
+const projects = (await getCollection("projects"))
+  .filter(({ data }) => data.tier !== "lab")
+  .sort((a, b) => (a.data.featuredRank ?? Number.MAX_SAFE_INTEGER) - (b.data.featuredRank ?? Number.MAX_SAFE_INTEGER));
 ---
 
 <BaseLayout title="Work | Blake Schmitt" description="Selected software engineering work and technical case studies.">
@@ -11,12 +14,8 @@ const projects = (await getCollection("projects")).filter(({ data }) => data.tie
     <p class="eyebrow">Work</p>
     <h1>Engineering evidence, organized by the problem solved.</h1>
     <ul class="project-list">
-      {projects.map(({ data }) => (
-        <li>
-          <p class="project-type">{data.projectType}</p>
-          <h2>{data.title}</h2>
-          <p>{data.summary}</p>
-        </li>
+      {projects.map((project) => (
+        <li><ProjectCard project={project} /></li>
       ))}
     </ul>
   </section>

@@ -87,9 +87,15 @@ nav a:hover {
 
 .foundation-shell,
 .page-shell,
-.project-index {
+.project-index,
+.case-study {
   width: var(--content);
   margin-inline: auto;
+}
+
+.foundation-shell,
+.page-shell,
+.project-index {
   padding-block: clamp(4rem, 10vw, 9rem);
 }
 
@@ -102,13 +108,20 @@ nav a:hover {
 }
 
 .eyebrow,
+.project-type,
+.project-card__meta,
+.evidence-type,
+.outcome-kind {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.eyebrow,
 .project-type {
   margin: 0 0 1rem;
-  color: var(--muted);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 h1,
@@ -126,18 +139,21 @@ h1 {
   letter-spacing: -0.045em;
 }
 
-.page-shell h1 {
+.page-shell h1,
+.case-study__header h1 {
   font-size: clamp(2.25rem, 5vw, 4.75rem);
 }
 
-.project-index h2 {
+.project-index h2,
+.case-section h2 {
   margin: 0;
   font-size: clamp(2rem, 4vw, 4rem);
 }
 
 .foundation-shell > p:last-child,
 .page-shell > p:not(.eyebrow),
-.project-index > p:not(.eyebrow) {
+.project-index > p:not(.eyebrow),
+.case-study__summary {
   max-width: 48rem;
   margin-top: 2rem;
   color: var(--muted);
@@ -153,22 +169,164 @@ h1 {
   padding: 0;
 }
 
-.project-list li {
+.project-list > li {
+  margin: 0;
+}
+
+.project-card {
+  height: 100%;
   padding: clamp(1.25rem, 3vw, 2rem);
   border: 1px solid var(--border);
   border-radius: 1rem;
   background: var(--surface);
 }
 
-.project-list h2,
-.project-list h3 {
+.project-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.project-card h2,
+.project-card h3 {
   margin: 0;
   font-size: clamp(1.5rem, 3vw, 2.2rem);
 }
 
-.project-list p:last-child {
+.project-card h2 a,
+.project-card h3 a {
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+}
+
+.project-card > p {
   max-width: 52rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+}
+
+.tag-list li {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.tag-list--large li {
+  font-size: 0.95rem;
+}
+
+.case-study {
+  padding-bottom: clamp(5rem, 10vw, 10rem);
+}
+
+.case-study__header,
+.case-section {
+  padding-block: clamp(3.5rem, 8vw, 7rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.case-study__header {
+  max-width: 64rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 4rem;
+  color: var(--muted);
+}
+
+.proof-links {
+  margin-top: 2rem;
+}
+
+.proof-links a {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.project-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 2.5rem 0;
+}
+
+.project-facts div {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--surface);
+}
+
+.project-facts dt {
+  margin-bottom: 0.45rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.project-facts dd {
+  margin: 0;
+}
+
+.case-section > p,
+.case-section > ul,
+.prose {
+  max-width: 52rem;
+  line-height: 1.75;
+}
+
+.case-section h3 {
+  margin-top: 2.25rem;
+  font-size: 1.25rem;
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+.prose > :last-child {
   margin-bottom: 0;
+}
+
+.evidence-list,
+.outcome-list {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  max-width: 60rem;
+  margin: 2.5rem 0 0;
+  padding: 0;
+}
+
+.evidence-list li,
+.outcome-list li {
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.evidence-list li > div {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.evidence-list p,
+.outcome-list p {
   color: var(--muted);
   line-height: 1.65;
 }
@@ -178,6 +336,10 @@ h1 {
     align-items: flex-start;
     flex-direction: column;
     padding-block: 1rem;
+  }
+
+  .project-facts {
+    grid-template-columns: 1fr;
   }
 }
 

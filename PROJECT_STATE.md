@@ -16,108 +16,239 @@ The portfolio should prove this statement through evidence rather than rely on c
 
 ## Current Phase
 
-Phase 1: Discovery, evidence audit, and product requirements.
+Phase 2: Architecture foundation, evidence system, case study implementation, and engineering skill development.
 
-Status: Active, with first repository evidence pass complete.
+Status: Active. Discovery is sufficiently stable for implementation. Repository proof and engineering education continue in parallel.
 
-Branch: `portfolio-v2`
+Integration branch: `portfolio-v2`
 
 Production branch: `main`
 
-## Completed
+Current implementation stack:
 
-1. Researched current portfolio expectations, engineering hiring signals, interaction trends, accessibility expectations, performance expectations, and modern portfolio patterns.
-2. Identified the strongest narrative around systems thinking, workflow automation, product engineering, and applied AI.
-3. Created the isolated `portfolio-v2` branch from the untouched production baseline.
-4. Audited the current portfolio repository structure, content model, homepage hierarchy, and existing proof gaps.
-5. Created the V2 operating documents, requirements, design principles, quality gates, and initial framework ADR.
-6. Located and inspected the actual CMS Rescue implementation in the private `blake2731/pluginlab` repository.
-7. Inspected Craft Product Publisher, SmallBizzWizz, Prime Lab, and Phase repository evidence.
-8. Recorded the first evidence readiness scorecard in `docs/EVIDENCE_AUDIT.md`.
-9. Revised the provisional flagship hierarchy using code evidence rather than initial assumptions.
+1. Draft PR 9: `feature/astro-foundation` into `portfolio-v2`.
+2. Draft PR 10: `feature/project-evidence-collection` into `feature/astro-foundation`.
+3. Draft PR 11: `feature/case-study-routes` into `feature/project-evidence-collection`.
 
-## Baseline Findings
+Production `main` remains untouched.
 
-1. The current site is a static HTML, CSS, and JavaScript application with JSON driven project data and reusable navbar and footer components.
-2. The current homepage gives SmallBizzWizz substantially more proof space than every other project.
-3. The current project data contains only SmallBizzWizz, The Crafty Brother Upload Tool, and Application Security Research.
-4. Public proof is incomplete for multiple projects. Several GitHub, live demo, case study, and screenshot fields are empty or marked TODO.
-5. The site has useful semantic and responsive work already present, but its accessibility, SEO, testing, performance, and evidence systems are incomplete.
-6. The repository has no V2 build system, formal test suite, CI quality gate, typed content schema, or completed architecture decision yet.
-7. The existing README and Backlog reflect the 2025 optimization cycle and are not sufficient to operate the new project lifecycle.
+## Architecture Status
 
-## Evidence Audit Findings
+Framework: Astro 7.2.6.
+
+Language: TypeScript 5.9.3.
+
+Rendering model: Static generation by default.
+
+Content model: Astro content collection with Zod validation.
+
+Client strategy: No React dependency by default. Interactive client code must have a clear explanatory or navigational purpose.
+
+Testing: Vitest unit tests plus Astro and TypeScript checks in CI.
+
+Dependency installation: Locked through committed `package-lock.json` and validated with `npm ci` in CI.
+
+CI permissions: Read only repository contents.
+
+Hosting target: GitHub Pages unless a later ADR justifies a change.
+
+Path strategy: Repository base paths are centralized through Astro configuration and framework supplied base URL handling.
+
+Latest branch quality gate: Green after deterministic dependency installation, content schema validation, Astro checks, unit tests, static case study generation, and production build.
+
+## Completed Portfolio Work
+
+1. Researched current portfolio expectations, hiring signals, interaction trends, accessibility, performance, modern frontend architecture, AI assisted engineering, security, and testing guidance.
+2. Created the isolated V2 workstream and operating documents.
+3. Audited the existing portfolio structure and proof gaps.
+4. Accepted Astro with TypeScript through ADR 0001.
+5. Defined Home, Work, case study, Lab, About, Resume, Contact, and 404 route behavior.
+6. Implemented typed project evidence with validation for public source claims, private proof posture, measured outcome provenance, gallery accessibility, and flagship rank collisions.
+7. Implemented reusable project cards and generated Work and Lab case study routes.
+8. Filtered private evidence out of public rendered case study pages.
+9. Added continuous integration and deterministic dependency installation.
+10. Created `docs/EDUCATIONAL_FOUNDATION.md` as the engineering curriculum for the rebuild.
+11. Created `docs/REPOSITORY_PORTFOLIO_MAP.md` to define which repositories deserve flagship, supporting, Lab, learning, or contribution status.
+12. Completed a broader audit of the GitHub account rather than limiting discovery to the original shortlist.
+13. Wrote the first complete flagship case study for SmallBizzWizz using public source evidence for the deterministic parser, processing pipeline, database model, upload boundary, production maintenance, failure states, AI boundary, tradeoffs, and known testing limitation.
+14. Added the verified BioBase Codon Adaptation Index contribution as a supporting Work entry with correct upstream attribution and merged pull request evidence.
+15. Verified that the richer content still passes locked installation, schema and type checks, unit tests, static route generation, and the production build.
+
+## Current Evidence Hierarchy
 
 ### SmallBizzWizz
 
-Current evidence readiness: 34 of 40.
+Role: Flagship and strongest public verification story.
 
-It is the strongest fully verifiable flagship today because the source is public, the system is substantial, production evidence exists, and repository history demonstrates ongoing defect handling. Its main weaknesses are a default starter README, no automated test command found in the first pass, and outcome claims that need tighter measurement.
+Evidence strength:
+
+1. Public source and live application.
+2. Substantial Next.js and PostgreSQL system.
+3. Authenticated APIs, billing, workbook ingestion, normalized data, deterministic insights, AI narratives, diagnostics, and explicit processing state.
+4. Real production maintenance history.
+5. Complete V2 case study now exists on the implementation branch.
+
+Current proof gap:
+
+No automated application test suite is exposed yet.
+
+Action taken:
+
+A documentation branch and draft pull request replace the default framework README with the actual architecture and reliability model. Repository issue 2 defines the deterministic financial pipeline test plan. Deterministic test implementation is now the immediate engineering task.
 
 ### CMS Rescue
 
-Current evidence readiness: 32 of 40.
+Role: Flagship and strongest differentiated product engineering story.
 
-CMS Rescue is real implemented software, not only a concept. The private `pluginlab` repository verifies deterministic CMS repair, conservative human review routing, source preservation, Framer permission checks, recovery behavior, linting, type checking, builds, Marketplace packaging, and a detailed release checklist. Its main proof gaps are private source, no automated test command found in the first pass, and no verified operational outcome yet.
+Evidence strength:
+
+1. Deterministic CMS repair.
+2. Human review for ambiguity.
+3. Source preservation.
+4. Framer permissions and recovery behavior.
+5. Product licensing and activation.
+6. Marketplace packaging and launch preparation.
+7. Security hardening history.
+
+Current proof gap:
+
+Private source, no automated test suite found, and no verified public usage outcome yet.
+
+Action taken:
+
+Repository issue 1 defines the invariant test architecture for matching, ambiguity, conflict, permissions, and partial write failures.
 
 ### Craft Product Publisher
 
-Current evidence readiness: 29 of 40.
+Role: Flagship business automation story.
 
-The private repository verifies a Python 3.12 and PySide6 desktop preparation pipeline with image quality inspection, protected previews, Shopify card generation, variant modeling, manifest output, automated tests, and explicit publication safety gates. The repository currently proves Version 0.1 only and does not yet contain the later Shopify workflow state discussed in recent work.
+Evidence strength:
+
+Python and PySide6 workflow, image processing, variant modeling, manifest persistence, automated foundation tests, and explicit publishing approval boundaries.
+
+Current proof gap:
+
+The audited GitHub state still proves only the foundation version and must be brought current before later Shopify workflow claims are published.
+
+### BioBase
+
+Role: Supporting open source collaboration evidence.
+
+Verified evidence:
+
+Upstream pull request 15 from `blake2731` was merged into `lignum-vitae/biobase` on November 3, 2025. It added Codon Adaptation Index calculation and tests covering DNA and RNA input, stop codons, missing reference coverage, partial codons, and invalid input behavior.
+
+Portfolio rule:
+
+Present this as a contribution to an external codebase, not ownership of BioBase.
+
+Portfolio status:
+
+A typed supporting Work entry now exists in V2.
+
+### Crafty Brother Shopify Theme
+
+Role: Supporting production commerce evidence.
+
+Verified evidence:
+
+Production Shopify Dawn customization includes variant aware pricing and shipping behavior for digital and physical products.
+
+### Matthews Detail
+
+Role: Supporting real business delivery.
+
+Verified evidence:
+
+Public repository and custom domain production site.
+
+Current proof gap:
+
+No README and unnecessarily large image assets.
 
 ### Prime Lab
 
-Current evidence readiness: 25 of 40.
+Role: Lab.
 
-Strong supporting evidence for computational experimentation and visualization, but parts of the package and tests remain empty on `main`, and business outcome relevance is limited.
+Primary signal: mathematical experimentation, visualization, and hypothesis driven work.
 
 ### Phase
 
-Current evidence readiness: 25 of 40.
+Role: Lab.
 
-Strong supporting evidence for originality and procedural browser engineering. It uses mathematical graphics, geometry, prime driven mechanics, and live Web Audio with no media assets. It currently lacks automated tests and has a concentrated single file architecture.
+Primary signal: procedural browser graphics, geometry, prime driven mechanics, Canvas, and synthesized Web Audio.
 
-### Portfolio Platform
+### Release Guard Spike
 
-Not scored yet. It must earn flagship status through the V2 architecture, content model, automated testing, CI, accessibility, performance, SEO, deployment quality, and documented technical decisions.
+Role: Lab and possible future product.
 
-## Revised Portfolio Hierarchy
+Current evidence:
 
-1. SmallBizzWizz as the strongest fully verifiable flagship today.
-2. CMS Rescue as the strongest differentiated flagship candidate.
-3. Craft Product Publisher as the strongest business automation flagship candidate once the repository reflects current work.
-4. Portfolio Platform as a future flagship that must earn its position during implementation.
-5. Prime Lab and Phase as supporting proof of experimentation and originality.
+Read only Framer capability probe for branch state, unpublished changes, deployments, and deployment issues.
 
-This order is provisional. CMS Rescue or Craft Product Publisher may overtake SmallBizzWizz when their proof gaps close.
+Do not promote it to flagship until a complete release readiness problem and useful user outcome exist.
+
+## GitHub Presentation Work Completed
+
+1. SmallBizzWizz draft PR 1 rewrites the public README around verified architecture and known limitations without changing production application code.
+2. GitHub profile draft PR 1 replaces older tutorial style primary projects with current engineering evidence.
+3. The profile draft includes the verified merged BioBase contribution.
+4. Recommended public pins are documented in `docs/REPOSITORY_PORTFOLIO_MAP.md`.
+
+## Educational Calibration
+
+The rebuild is intentionally teaching and demonstrating ten transferable foundations:
+
+1. Contracts and correctness.
+2. Data modeling.
+3. Testing as evidence.
+4. Failure engineering and resilience.
+5. Security engineering.
+6. Observability and operability.
+7. Web accessibility and performance.
+8. Reproducible delivery.
+9. AI engineering with deterministic boundaries and evaluation.
+10. Technical communication.
+
+The detailed learning sequence and project mapping are in `docs/EDUCATIONAL_FOUNDATION.md`.
 
 ## Active Work
 
-1. Extract publishable flagship narratives and content inventories from the evidence audit.
-2. Decide how private projects will expose credible technical proof without publishing sensitive source.
-3. Compare Astro and Next.js against the now clearer requirements and record the architecture decision.
-4. Define the V2 information architecture and typed project content model.
-5. Turn the lifecycle into trackable GitHub issues.
+1. Implement the deterministic SmallBizzWizz test suite defined in repository issue 2.
+2. Implement CMS Rescue invariant tests defined in repository issue 1.
+3. Build the publishable CMS Rescue proof package.
+4. Bring Craft Product Publisher GitHub state up to its current implementation before expanding claims.
+5. Add approved screenshots and diagrams to flagship content.
+6. Add Playwright browser coverage to Portfolio V2.
+7. Add automated accessibility checks and manual keyboard validation.
+8. Establish performance budgets and measure Core Web Vitals.
+9. Perform an OWASP ASVS informed review of SmallBizzWizz trust boundaries.
+10. Begin the evidence led visual system only after correctness, proof, and real case study content are strong enough to design around.
 
 ## Immediate Next Move
 
-Resolve the architecture decision using the actual portfolio requirements, then define the V2 content schema and information architecture around the revised flagship hierarchy.
+Implement the first SmallBizzWizz deterministic test layer around workbook parsing and reconciliation.
 
-Do not begin decorative visual redesign before the architecture, content model, and flagship proof strategy are stable.
+The first slice should prove supported and unsupported workbook detection, hierarchy handling, closing total validation, tolerance behavior, immediate parent accumulation, formula result handling, hidden row preservation, reporting period validation, checksum stability, and at least one sanitized regression case from a previous spreadsheet defect.
+
+After that, use the same educational pattern for CMS Rescue invariant tests before heavy visual design work.
 
 ## Working Rules
 
 1. Evidence before aesthetics.
-2. Claims must be traceable to code, documentation, screenshots, deployed behavior, or verifiable outcomes.
+2. Claims must be traceable to code, documentation, screenshots, deployed behavior, merged contribution history, or verifiable outcomes.
 3. Production on `main` stays stable until V2 passes the quality gates.
-4. New implementation work happens on focused branches derived from `portfolio-v2` once architecture is selected.
-5. Paths must work locally and on GitHub Pages or the selected production host without hardcoded repository prefixes.
-6. Accessibility, performance, SEO, responsiveness, and reduced motion behavior are release requirements, not cleanup tasks.
+4. Implementation work uses focused branches and reviewable pull requests.
+5. Paths must work locally and on the selected production host without hardcoded repository prefixes.
+6. Accessibility, performance, security, responsiveness, testing, and reduced motion behavior are release requirements.
 7. Every major architectural decision gets an ADR.
 8. Every work session updates this file when project state materially changes.
-9. Private repositories may support case studies, but the public portfolio must provide enough publishable evidence for a reviewer to verify the engineering story.
+9. Private repositories may support case studies, but public pages must provide enough safe evidence for an external reviewer to understand the engineering claim.
+10. Do not invent metrics, outcomes, users, revenue, deployment status, or technical behavior.
+11. A learning topic is not complete until the principle can be explained, demonstrated in code, tested or measured, and defended as a tradeoff.
 
 ## Definition of V2 Success
 
-The finished portfolio should make a technically literate reviewer understand within roughly one minute what kinds of problems Blake solves, why the work is credible, where the strongest engineering evidence lives, and how to contact or evaluate him further. Deeper exploration should reward engineering managers with architecture, tradeoffs, testing, system behavior, and outcomes rather than marketing copy alone.
+The finished portfolio should make a technically literate reviewer understand within roughly one minute what kinds of problems Blake solves, why the work is credible, where the strongest engineering evidence lives, and how to inspect or contact him further.
+
+Deeper exploration should reward engineering managers with architecture, tradeoffs, tests, failure handling, security boundaries, system behavior, production learning, and measured quality rather than marketing copy alone.

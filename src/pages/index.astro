@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 
+import ProjectCard from "../components/ProjectCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { findFeaturedRankCollisions } from "../lib/projectRules";
 
@@ -33,12 +34,8 @@ const featured = projects
     <p class="eyebrow">Flagship evidence</p>
     <h2 id="featured-heading">Current proof hierarchy</h2>
     <ol class="project-list">
-      {featured.map(({ data }) => (
-        <li>
-          <p class="project-type">{data.projectType}</p>
-          <h3>{data.title}</h3>
-          <p>{data.summary}</p>
-        </li>
+      {featured.map((project) => (
+        <li><ProjectCard project={project} headingLevel="h3" /></li>
       ))}
     </ol>
   </section>

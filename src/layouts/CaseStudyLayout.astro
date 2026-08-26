@@ -1,0 +1,78 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import EvidenceList from "../components/case-study/EvidenceList.astro";
+import OutcomeList from "../components/case-study/OutcomeList.astro";
+import ProjectLinks from "../components/case-study/ProjectLinks.astro";
+import { withBase } from "../utils/paths";
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+  project: CollectionEntry<"projects">;
+  backHref: string;
+  backLabel: string;
+}
+
+const { project, backHref, backLabel } = Astro.props;
+const { data } = project;
+---
+
+<BaseLayout title={`${data.title} | Blake Schmitt`} description={data.summary}>
+  <article class="case-study">
+    <header class="case-study__header">
+      <a class="back-link" href={withBase(backHref)}>← {backLabel}</a>
+      <p class="eyebrow">{data.projectType}</p>
+      <h1>{data.title}</h1>
+      <p class="case-study__summary">{data.summary}</p>
+      <ProjectLinks project={project} />
+    </header>
+
+    <section class="case-section case-section--overview" aria-labelledby="overview-heading">
+      <p class="eyebrow">Context</p>
+      <h2 id="overview-heading">The problem and operating constraints</h2>
+      <dl class="project-facts">
+        <div>
+          <dt>Role</dt>
+          <dd>{data.role}</dd>
+        </div>
+        <div>
+          <dt>Timeframe</dt>
+          <dd>{data.timeframe}</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>{data.status.replaceAll("-", " ")}</dd>
+        </div>
+      </dl>
+      <h3>Problem</h3>
+      <p>{data.problem}</p>
+      {data.constraints.length > 0 && (
+        <>
+          <h3>Constraints</h3>
+          <ul>
+            {data.constraints.map((constraint) => <li>{constraint}</li>)}
+          </ul>
+        </>
+      )}
+    </section>
+
+    <section class="case-section" aria-labelledby="stack-heading">
+      <p class="eyebrow">Implementation surface</p>
+      <h2 id="stack-heading">Verified technology</h2>
+      <ul class="tag-list tag-list--large">
+        {data.stack.map((technology) => <li>{technology}</li>)}
+      </ul>
+    </section>
+
+    <section class="case-section case-study__narrative" aria-labelledby="narrative-heading">
+      <p class="eyebrow">Engineering narrative</p>
+      <h2 id="narrative-heading">What matters in the implementation</h2>
+      <div class="prose">
+        <slot />
+      </div>
+    </section>
+
+    <EvidenceList project={project} />
+    <OutcomeList project={project} />
+  </article>
+</BaseLayout>
