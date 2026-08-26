@@ -88,7 +88,40 @@ Next move:
 
 Bring repository state current, preserve the tested approval model, then capture screenshots and workflow evidence.
 
-## Tier B: Supporting Real World Engineering
+## Tier B: Supporting Real World and Collaborative Engineering
+
+### BioBase open source contribution
+
+Upstream repository: `lignum-vitae/biobase`
+
+Fork: `blake2731/biobase`
+
+Role: Supporting open source collaboration evidence.
+
+Verified contribution:
+
+Upstream pull request 15 was authored by `blake2731` and merged on November 3, 2025. It added Codon Adaptation Index calculation and tests.
+
+The merged contribution explicitly covers:
+
+1. CAI as the geometric mean of per codon weights.
+2. DNA and RNA input handling.
+3. Stop codon exclusion.
+4. Missing reference coverage behavior.
+5. Partial codon behavior.
+6. Invalid input cases.
+7. Unit tests and a doctest example.
+8. Review feedback changes before merge.
+
+Additional fork history contains GenBank parser and test suite work, but only contribution evidence that can be traced to upstream collaboration should be presented as open source contribution proof.
+
+Why it matters:
+
+This demonstrates something the standalone projects cannot: working against an external codebase, following another project's conventions, responding to review, and shipping tested code that another maintainer accepted.
+
+Portfolio treatment:
+
+Present the contribution, not ownership of BioBase itself.
 
 ### Crafty Brother Shopify Theme
 
@@ -215,13 +248,7 @@ Repositories such as class projects, framework tutorials, large external codebas
 
 This includes repositories whose names or documentation indicate tutorials, coursework, or upstream project history, such as Angular learning repositories, MEAN stack learning repositories, Hardhat tutorials, CS course repositories, and large external projects.
 
-### BioBase special case
-
-`blake2731/biobase` has substantial documentation, but that documentation identifies `lignum-vitae/biobase` as the project source and contribution destination.
-
-Do not present the entire repository as an independently owned Blake project without first auditing Blake specific commits or pull requests.
-
-If meaningful contributions exist, present them as open source contribution evidence instead. That can be more credible than implying ownership of the full package.
+Forks can still create strong portfolio evidence when a specific upstream contribution is verified. BioBase is the current example of how to present that correctly.
 
 ## Recommended Public GitHub Pins
 
@@ -229,13 +256,13 @@ Once the documentation changes are merged, the strongest initial public pin set 
 
 1. `my-portfolio`.
 2. `smallbizzwizz`.
-3. `prime-lab`.
-4. `phase`.
-5. `tiny-python-utils`.
+3. BioBase upstream contribution, if GitHub offers the upstream repository in the contributed repository pin selector. Otherwise use the fork and make the merged upstream pull request prominent.
+4. `prime-lab`.
+5. `phase`.
 
-`matthews-detail` can replace `tiny-python-utils` after its README and performance presentation are improved if real business delivery is more useful for the target role.
+`matthews-detail` can become a sixth useful pin after its README and performance presentation are improved.
 
-Do not use public pin space merely to maximize language variety.
+Do not use pin space merely to maximize language variety.
 
 ## Homepage Portfolio Rule
 
@@ -247,7 +274,7 @@ The homepage should contain only three flagship stories at launch:
 
 The order can change after proof gaps close.
 
-The Work page can contain selected supporting business evidence.
+The Work page can contain selected supporting business and open source evidence.
 
 The Lab page contains Prime Lab, Phase, and any future experiments that demonstrate real technical curiosity.
 
@@ -260,6 +287,8 @@ SmallBizzWizz answers: Can this engineer build and maintain a substantial full s
 CMS Rescue answers: Can this engineer design safe automation around ambiguous real world data and a third party platform API?
 
 Craft Product Publisher answers: Can this engineer automate a business workflow outside the browser while preserving review and safety boundaries?
+
+BioBase answers: Can this engineer contribute tested code to somebody else's codebase and work through external review?
 
 Matthews Detail and Shopify theme work answer: Has this engineer delivered software that real businesses actually use?
 
