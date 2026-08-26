@@ -1,11 +1,23 @@
 ---
+import { getCollection } from "astro:content";
+
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const projects = (await getCollection("projects")).filter(({ data }) => data.tier !== "lab");
 ---
 
 <BaseLayout title="Work | Blake Schmitt" description="Selected software engineering work and technical case studies.">
   <section class="page-shell">
     <p class="eyebrow">Work</p>
     <h1>Engineering evidence, organized by the problem solved.</h1>
-    <p>Project entries will be generated from the validated V2 evidence collection.</p>
+    <ul class="project-list">
+      {projects.map(({ data }) => (
+        <li>
+          <p class="project-type">{data.projectType}</p>
+          <h2>{data.title}</h2>
+          <p>{data.summary}</p>
+        </li>
+      ))}
+    </ul>
   </section>
 </BaseLayout>

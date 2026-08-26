@@ -1,5 +1,19 @@
 ---
+import { getCollection } from "astro:content";
+
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { findFeaturedRankCollisions } from "../lib/projectRules";
+
+const projects = await getCollection("projects");
+const rankErrors = findFeaturedRankCollisions(projects.map(({ data }) => data));
+
+if (rankErrors.length > 0) {
+  throw new Error(rankErrors.join("\n"));
+}
+
+const featured = projects
+  .filter(({ data }) => data.tier === "flagship")
+  .sort((a, b) => (a.data.featuredRank ?? Number.MAX_SAFE_INTEGER) - (b.data.featuredRank ?? Number.MAX_SAFE_INTEGER));
 ---
 
 <BaseLayout
@@ -10,9 +24,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <p class="eyebrow">Portfolio V2 foundation</p>
     <h1 id="v2-heading">I turn messy real world problems into trustworthy software systems.</h1>
     <p>
-      The new portfolio architecture is now in implementation. Flagship proof, case studies, and
-      interaction design will be added through the project evidence model rather than hardcoded into
-      this page.
+      The new portfolio is being built around verified engineering evidence rather than a loose project list.
+      These are the current flagship systems according to the repository audit.
     </p>
+  </section>
+
+  <section class="project-index" aria-labelledby="featured-heading">
+    <p class="eyebrow">Flagship evidence</p>
+    <h2 id="featured-heading">Current proof hierarchy</h2>
+    <ol class="project-list">
+      {featured.map(({ data }) => (
+        <li>
+          <p class="project-type">{data.projectType}</p>
+          <h3>{data.title}</h3>
+          <p>{data.summary}</p>
+        </li>
+      ))}
+    </ol>
   </section>
 </BaseLayout>
