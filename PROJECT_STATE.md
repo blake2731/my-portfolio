@@ -54,7 +54,7 @@ Hosting target: GitHub Pages unless a later ADR justifies a change.
 
 Path strategy: Repository base paths are centralized through Astro configuration and framework supplied base URL handling.
 
-Latest branch quality gate: Green after deterministic dependency installation, Astro checks, unit tests, and production build.
+Latest branch quality gate: Green after deterministic dependency installation, content schema validation, Astro checks, unit tests, static case study generation, and production build.
 
 ## Completed Portfolio Work
 
@@ -70,6 +70,9 @@ Latest branch quality gate: Green after deterministic dependency installation, A
 10. Created `docs/EDUCATIONAL_FOUNDATION.md` as the engineering curriculum for the rebuild.
 11. Created `docs/REPOSITORY_PORTFOLIO_MAP.md` to define which repositories deserve flagship, supporting, Lab, learning, or contribution status.
 12. Completed a broader audit of the GitHub account rather than limiting discovery to the original shortlist.
+13. Wrote the first complete flagship case study for SmallBizzWizz using public source evidence for the deterministic parser, processing pipeline, database model, upload boundary, production maintenance, failure states, AI boundary, tradeoffs, and known testing limitation.
+14. Added the verified BioBase Codon Adaptation Index contribution as a supporting Work entry with correct upstream attribution and merged pull request evidence.
+15. Verified that the richer content still passes locked installation, schema and type checks, unit tests, static route generation, and the production build.
 
 ## Current Evidence Hierarchy
 
@@ -83,6 +86,7 @@ Evidence strength:
 2. Substantial Next.js and PostgreSQL system.
 3. Authenticated APIs, billing, workbook ingestion, normalized data, deterministic insights, AI narratives, diagnostics, and explicit processing state.
 4. Real production maintenance history.
+5. Complete V2 case study now exists on the implementation branch.
 
 Current proof gap:
 
@@ -90,7 +94,7 @@ No automated application test suite is exposed yet.
 
 Action taken:
 
-A documentation branch and draft pull request now replace the default framework README with the actual architecture and reliability model. A dedicated issue defines the deterministic financial pipeline test plan.
+A documentation branch and draft pull request replace the default framework README with the actual architecture and reliability model. Repository issue 2 defines the deterministic financial pipeline test plan. Deterministic test implementation is now the immediate engineering task.
 
 ### CMS Rescue
 
@@ -112,7 +116,7 @@ Private source, no automated test suite found, and no verified public usage outc
 
 Action taken:
 
-A dedicated repository issue now defines the invariant test architecture for matching, ambiguity, conflict, permissions, and partial write failures.
+Repository issue 1 defines the invariant test architecture for matching, ambiguity, conflict, permissions, and partial write failures.
 
 ### Craft Product Publisher
 
@@ -137,6 +141,10 @@ Upstream pull request 15 from `blake2731` was merged into `lignum-vitae/biobase`
 Portfolio rule:
 
 Present this as a contribution to an external codebase, not ownership of BioBase.
+
+Portfolio status:
+
+A typed supporting Work entry now exists in V2.
 
 ### Crafty Brother Shopify Theme
 
@@ -184,7 +192,7 @@ Do not promote it to flagship until a complete release readiness problem and use
 
 1. SmallBizzWizz draft PR 1 rewrites the public README around verified architecture and known limitations without changing production application code.
 2. GitHub profile draft PR 1 replaces older tutorial style primary projects with current engineering evidence.
-3. The profile draft now includes the verified merged BioBase contribution.
+3. The profile draft includes the verified merged BioBase contribution.
 4. Recommended public pins are documented in `docs/REPOSITORY_PORTFOLIO_MAP.md`.
 
 ## Educational Calibration
@@ -206,25 +214,24 @@ The detailed learning sequence and project mapping are in `docs/EDUCATIONAL_FOUN
 
 ## Active Work
 
-1. Build the complete SmallBizzWizz V2 case study from the verified architecture.
-2. Implement the deterministic SmallBizzWizz test suite defined in repository issue 2.
-3. Implement CMS Rescue invariant tests defined in repository issue 1.
-4. Build the publishable CMS Rescue proof package.
-5. Bring Craft Product Publisher GitHub state up to its current implementation before expanding claims.
-6. Add approved screenshots and diagrams to flagship content.
-7. Add Playwright browser coverage to Portfolio V2.
-8. Add automated accessibility checks and manual keyboard validation.
-9. Establish performance budgets and measure Core Web Vitals.
-10. Perform an OWASP ASVS informed review of SmallBizzWizz trust boundaries.
-11. Begin the evidence led visual system only after real flagship content exercises the route architecture.
+1. Implement the deterministic SmallBizzWizz test suite defined in repository issue 2.
+2. Implement CMS Rescue invariant tests defined in repository issue 1.
+3. Build the publishable CMS Rescue proof package.
+4. Bring Craft Product Publisher GitHub state up to its current implementation before expanding claims.
+5. Add approved screenshots and diagrams to flagship content.
+6. Add Playwright browser coverage to Portfolio V2.
+7. Add automated accessibility checks and manual keyboard validation.
+8. Establish performance budgets and measure Core Web Vitals.
+9. Perform an OWASP ASVS informed review of SmallBizzWizz trust boundaries.
+10. Begin the evidence led visual system only after correctness, proof, and real case study content are strong enough to design around.
 
 ## Immediate Next Move
 
-Write the first complete SmallBizzWizz case study inside the typed V2 content system using the verified repository evidence already collected.
+Implement the first SmallBizzWizz deterministic test layer around workbook parsing and reconciliation.
 
-The case study must make the deterministic financial pipeline, AI boundary, failure states, database model, production maintenance, and current test gap understandable to an engineering manager.
+The first slice should prove supported and unsupported workbook detection, hierarchy handling, closing total validation, tolerance behavior, immediate parent accumulation, formula result handling, hidden row preservation, reporting period validation, checksum stability, and at least one sanitized regression case from a previous spreadsheet defect.
 
-After that content exercises the current architecture, start the SmallBizzWizz deterministic test suite before heavy visual design work.
+After that, use the same educational pattern for CMS Rescue invariant tests before heavy visual design work.
 
 ## Working Rules
 
