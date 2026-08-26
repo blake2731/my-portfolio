@@ -11,7 +11,7 @@ themes:
   - visualization
   - experimentation
 role: Designer and developer
-timeframe: 2026
+timeframe: "2026"
 problem: Prime number patterns are difficult to reason about from formulas alone, so the project turns filtering and modular relationships into interactive experiments that can be inspected and tested.
 constraints:
   - Experiments should remain reproducible rather than exist only as visual effects.
