@@ -14,7 +14,7 @@ themes:
   - workflow design
   - safety
 role: Product software and automation engineer
-timeframe: 2026
+timeframe: "2026"
 problem: Preparing craft artwork for ecommerce requires repetitive image checks, preview generation, product metadata, variants, and publishing decisions that are easy to perform inconsistently by hand.
 constraints:
   - Low resolution or risky print assets must be surfaced before publishing.
