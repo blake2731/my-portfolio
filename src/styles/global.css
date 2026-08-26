@@ -86,7 +86,8 @@ nav a:hover {
 }
 
 .foundation-shell,
-.page-shell {
+.page-shell,
+.project-index {
   width: var(--content);
   margin-inline: auto;
   padding-block: clamp(4rem, 10vw, 9rem);
@@ -96,13 +97,25 @@ nav a:hover {
   max-width: 60rem;
 }
 
-.eyebrow {
+.project-index {
+  border-top: 1px solid var(--border);
+}
+
+.eyebrow,
+.project-type {
   margin: 0 0 1rem;
   color: var(--muted);
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  text-wrap: pretty;
 }
 
 h1 {
@@ -117,13 +130,47 @@ h1 {
   font-size: clamp(2.25rem, 5vw, 4.75rem);
 }
 
+.project-index h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+
 .foundation-shell > p:last-child,
-.page-shell > p:last-child {
+.page-shell > p:not(.eyebrow),
+.project-index > p:not(.eyebrow) {
   max-width: 48rem;
   margin-top: 2rem;
   color: var(--muted);
   font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.7;
+}
+
+.project-list {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  margin: 3rem 0 0;
+  padding: 0;
+}
+
+.project-list li {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+}
+
+.project-list h2,
+.project-list h3 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.project-list p:last-child {
+  max-width: 52rem;
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.65;
 }
 
 @media (max-width: 44rem) {
