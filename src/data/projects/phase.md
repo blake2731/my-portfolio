@@ -12,7 +12,7 @@ themes:
   - graphics
   - audio
 role: Designer and developer
-timeframe: 2026
+timeframe: "2026"
 problem: Explore whether mathematical systems can generate not only visuals but also game mechanics, geometry, enemy behavior, motion, explosions, and sound inside a small browser experience.
 constraints:
   - No image, texture, sprite, music, or sound asset files.
