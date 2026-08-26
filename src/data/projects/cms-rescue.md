@@ -14,7 +14,7 @@ themes:
   - safety
   - platform integration
 role: Product designer and software engineer
-timeframe: 2026
+timeframe: "2026"
 problem: CMS migrations can leave relationship data as plain text or broken references, creating cleanup work where aggressive automation risks corrupting imported content.
 constraints:
   - Automatic repair must occur only when a unique deterministic match exists.
