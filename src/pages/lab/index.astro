@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 
+import ProjectCard from "../../components/ProjectCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const projects = (await getCollection("projects")).filter(({ data }) => data.tier === "lab");
@@ -11,12 +12,8 @@ const projects = (await getCollection("projects")).filter(({ data }) => data.tie
     <p class="eyebrow">Lab</p>
     <h1>Experiments that make curiosity executable.</h1>
     <ul class="project-list">
-      {projects.map(({ data }) => (
-        <li>
-          <p class="project-type">{data.projectType}</p>
-          <h2>{data.title}</h2>
-          <p>{data.summary}</p>
-        </li>
+      {projects.map((project) => (
+        <li><ProjectCard project={project} /></li>
       ))}
     </ul>
   </section>

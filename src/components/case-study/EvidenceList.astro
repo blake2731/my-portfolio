@@ -1,0 +1,31 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  project: CollectionEntry<"projects">;
+}
+
+const { project } = Astro.props;
+const publicEvidence = project.data.evidence.filter((evidence) => evidence.visibility === "public");
+---
+
+{publicEvidence.length > 0 && (
+  <section class="case-section" aria-labelledby="evidence-heading">
+    <p class="eyebrow">Evidence</p>
+    <h2 id="evidence-heading">What can be verified</h2>
+    <ul class="evidence-list">
+      {publicEvidence.map((evidence) => (
+        <li>
+          <div>
+            <span class="evidence-type">{evidence.type}</span>
+            <strong>{evidence.label}</strong>
+          </div>
+          <p>{evidence.claim}</p>
+          {evidence.source.startsWith("https://") && (
+            <a href={evidence.source} target="_blank" rel="noreferrer">Inspect evidence</a>
+          )}
+        </li>
+      ))}
+    </ul>
+  </section>
+)}

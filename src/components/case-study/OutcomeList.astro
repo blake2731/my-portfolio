@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  project: CollectionEntry<"projects">;
+}
+
+const { project } = Astro.props;
+---
+
+{project.data.outcomes.length > 0 && (
+  <section class="case-section" aria-labelledby="outcomes-heading">
+    <p class="eyebrow">Outcomes</p>
+    <h2 id="outcomes-heading">What the evidence supports</h2>
+    <ul class="outcome-list">
+      {project.data.outcomes.map((outcome) => (
+        <li>
+          <span class="outcome-kind">{outcome.kind.replaceAll("-", " ")}</span>
+          <p>{outcome.statement}</p>
+          {outcome.source?.startsWith("https://") && (
+            <a href={outcome.source} target="_blank" rel="noreferrer">Outcome source</a>
+          )}
+        </li>
+      ))}
+    </ul>
+  </section>
+)}

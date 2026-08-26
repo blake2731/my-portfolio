@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import { withBase } from "../utils/paths";
+
+interface Props {
+  project: CollectionEntry<"projects">;
+  headingLevel?: "h2" | "h3";
+}
+
+const { project, headingLevel = "h2" } = Astro.props;
+const { data } = project;
+const Heading = headingLevel;
+const route = data.tier === "lab" ? `lab/${data.slug}/` : `work/${data.slug}/`;
+---
+
+<article class="project-card">
+  <div class="project-card__meta">
+    <span>{data.projectType}</span>
+    <span>{data.status.replaceAll("-", " ")}</span>
+  </div>
+  <Heading><a href={withBase(route)}>{data.title}</a></Heading>
+  <p>{data.summary}</p>
+  <ul class="tag-list" aria-label={`${data.title} themes`}>
+    {data.themes.slice(0, 3).map((theme) => <li>{theme}</li>)}
+  </ul>
+</article>
