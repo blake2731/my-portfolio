@@ -1,6 +1,6 @@
 # ADR 0001: Portfolio V2 Framework Selection
 
-Status: Proposed.
+Status: Accepted.
 
 Date: August 26, 2026.
 
@@ -8,7 +8,7 @@ Date: August 26, 2026.
 
 The existing portfolio is static HTML, CSS, and JavaScript with JSON project data. V2 needs typed content, reusable case study primitives, strong static delivery, excellent performance, accessible interactions, maintainable project content, automated quality checks, and reliable deployment.
 
-The initial research favored Astro with TypeScript and content collections, but Next.js remains a serious candidate because Blake already uses it and it can demonstrate a familiar production stack.
+The evidence audit also clarified that the site is primarily a content and proof system. It needs selective interactive explanations, but it does not need application wide client state, authenticated behavior, server mutations, or an application server.
 
 ## Decision Drivers
 
@@ -21,45 +21,96 @@ The initial research favored Astro with TypeScript and content collections, but 
 7. SEO and metadata support.
 8. Automated testing support.
 9. Deployment reliability.
-10. Compatibility with the chosen production host.
+10. Compatibility with GitHub Pages and future custom domain hosting.
 11. Learning value without unnecessary complexity.
 12. Ability for the portfolio itself to demonstrate strong engineering judgment.
 
-## Candidates
-
-### Astro
-
-Expected strengths:
-
-1. Static first architecture.
-2. Low JavaScript by default.
-3. Content collections fit case study content well.
-4. Islands allow selective interactivity.
-5. Strong alignment with a content rich portfolio.
-
-Questions to resolve:
-
-1. Hosting and route behavior under the final production target.
-2. Exact image pipeline and asset strategy.
-3. Testing and interaction architecture for the desired experience.
-
-### Next.js
-
-Expected strengths:
-
-1. Familiar React and TypeScript ecosystem.
-2. Strong component model and metadata support.
-3. Broad deployment ecosystem.
-4. Direct relevance to roles using React and Next.js.
-
-Questions to resolve:
-
-1. Whether the portfolio needs enough application behavior to justify the additional runtime and client complexity.
-2. Static export constraints under the final hosting model.
-3. Whether a React heavy architecture would weaken the performance and simplicity story compared with Astro.
-
 ## Decision
 
-Pending evidence audit and a requirement based comparison.
+Use Astro with TypeScript as the Portfolio V2 application framework.
 
-Do not choose the framework because it is trendy or familiar. Choose the option that best satisfies the portfolio product requirements with the smallest justified complexity.
+Use Astro content collections for project and case study metadata.
+
+Use static generation as the default output model.
+
+Use Astro components for noninteractive presentation and layout.
+
+Use client side JavaScript only for interactions that create explanatory or navigational value.
+
+Do not add React merely because it is familiar. A React integration may be introduced later for an interaction whose state complexity genuinely benefits from it, and that addition should be justified by implementation evidence.
+
+## Why Astro
+
+### Static first behavior matches the product
+
+The portfolio is predominantly durable content, project evidence, diagrams, screenshots, writing, and navigation. Astro renders components to static HTML by default and only hydrates components explicitly marked for client behavior.
+
+This makes performance discipline structural rather than aspirational.
+
+### Content collections match the evidence system
+
+The portfolio needs project entries with stable schemas, validated proof links, visibility rules, technologies, evidence artifacts, outcomes, and case study content. Astro content collections provide a typed content layer that can validate these fields at build time.
+
+### Selective interactivity supports the design direction
+
+The experience can still include sophisticated interactions such as system diagrams, evidence explorers, controlled motion, project transitions, and procedural details without turning every page into a client rendered React application.
+
+### GitHub Pages is a supported deployment target
+
+Astro documents an official GitHub Pages deployment workflow using GitHub Actions. The project can configure the repository base path and use the framework supplied base URL value rather than scattering a hardcoded repository prefix throughout source files.
+
+### It adds useful learning value
+
+SmallBizzWizz already demonstrates Next.js and React. Using Astro for the portfolio broadens demonstrated frontend architecture judgment instead of duplicating the same stack for a problem that does not require it.
+
+## Why Not Next.js for V2
+
+Next.js remains an excellent application framework and static export is supported. However, static export intentionally does not support server dependent features and requires special handling for capabilities such as the default image optimizer.
+
+The portfolio does not currently need the full application model that makes Next.js most valuable. Choosing it mainly for familiarity or keyword recognition would make the architecture harder to justify.
+
+Next.js remains strongly represented through the SmallBizzWizz case study.
+
+## Hosting Strategy
+
+Initial production target remains GitHub Pages unless a later ADR justifies a host change.
+
+Configuration must support both local development and repository path deployment.
+
+Use Astro configuration for the production `site` and `base` values.
+
+Internal URL generation must centralize base path handling using framework supplied path information such as `import.meta.env.BASE_URL` or equivalent helpers. Do not write `/my-portfolio` into individual components.
+
+A future custom domain should require configuration changes rather than rewriting content links.
+
+## Interaction Strategy
+
+1. Prefer semantic HTML and CSS for baseline behavior.
+2. Prefer browser platform capabilities for simple interaction.
+3. Use small TypeScript modules when state is local and straightforward.
+4. Use Astro client islands only when interaction requires browser execution.
+5. Add React only when component state complexity justifies it.
+6. Respect reduced motion from the first implementation.
+7. No critical content may require JavaScript, hover, or animation to be understood.
+
+## Consequences
+
+Positive consequences:
+
+1. Lower default JavaScript cost.
+2. Strong typed content architecture.
+3. Natural static case study generation.
+4. Clear separation between content and interactive islands.
+5. Strong fit for GitHub Pages.
+6. A differentiated portfolio architecture alongside existing Next.js work.
+
+Tradeoffs:
+
+1. Astro is a new framework surface to learn and maintain.
+2. Complex client interactions may require additional integration decisions.
+3. Repository path hosting still requires disciplined URL construction.
+4. Some React specific component libraries cannot be adopted thoughtlessly without adding client cost.
+
+## Revisit Conditions
+
+Reopen this ADR only if V2 requirements materially change to require authenticated application state, server side mutations, dynamic request time personalization, or another feature that makes a full application server meaningfully more appropriate.
