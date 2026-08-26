@@ -1,0 +1,146 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  background: #0b0d10;
+  color: #f3f5f7;
+  --surface: #11151a;
+  --border: #2a3139;
+  --muted: #a7b0ba;
+  --focus: #9bd7ff;
+  --content: min(72rem, calc(100% - 2rem));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #0b0d10;
+}
+
+body {
+  margin: 0;
+  min-width: 20rem;
+  background: #0b0d10;
+  color: #f3f5f7;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 0.2rem solid var(--focus);
+  outline-offset: 0.25rem;
+}
+
+.skip-link {
+  position: fixed;
+  inset: 0.75rem auto auto 0.75rem;
+  z-index: 100;
+  padding: 0.65rem 0.85rem;
+  transform: translateY(-200%);
+  background: #ffffff;
+  color: #0b0d10;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header {
+  width: var(--content);
+  margin-inline: auto;
+  min-height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+.foundation-shell,
+.page-shell {
+  width: var(--content);
+  margin-inline: auto;
+  padding-block: clamp(4rem, 10vw, 9rem);
+}
+
+.foundation-shell {
+  max-width: 60rem;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 18ch;
+  margin: 0;
+  font-size: clamp(2.6rem, 7vw, 6.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.page-shell h1 {
+  font-size: clamp(2.25rem, 5vw, 4.75rem);
+}
+
+.foundation-shell > p:last-child,
+.page-shell > p:last-child {
+  max-width: 48rem;
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.7;
+}
+
+@media (max-width: 44rem) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-block: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

@@ -1,0 +1,38 @@
+---
+import "../styles/global.css";
+import { withBase } from "../utils/paths";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href={withBase("/")} aria-label="Blake Schmitt home">BS</a>
+      <nav aria-label="Primary navigation">
+        <a href={withBase("work/")}>Work</a>
+        <a href={withBase("about/")}>About</a>
+        <a href={withBase("lab/")}>Lab</a>
+        <a href={withBase("resume/")}>Resume</a>
+        <a href={withBase("contact/")}>Contact</a>
+      </nav>
+    </header>
+    <main id="main-content">
+      <slot />
+    </main>
+  </body>
+</html>

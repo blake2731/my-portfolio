@@ -1,0 +1,36 @@
+name: Portfolio V2 CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PORTFOLIO_SITE: https://blake2731.github.io
+      PORTFOLIO_BASE: /my-portfolio
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Type and Astro checks
+        run: npm run check
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Production build
+        run: npm run build
