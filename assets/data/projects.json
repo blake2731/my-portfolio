@@ -1,5 +1,57 @@
 [
   {
+    "id": "nvidia-cudf-nullable-boolean",
+    "title": "NVIDIA cuDF | Nullable Boolean correctness",
+    "summary": "Merged upstream correctness fix for null-aware Boolean AND and OR logic.",
+    "description": "Contributed a merged correction to nullable Boolean AND/OR behavior in NVIDIA cuDF. The fix uses existing libcudf null logical operators to preserve known results when the other operand is null.",
+    "problem": "Nullable Boolean expressions such as True OR null and False AND null were propagating null incorrectly, producing discrepancies with pandas and incorrect filtering results.",
+    "role": "Open source contributor: investigated the operator semantics, implemented the targeted fix, and added regression tests.",
+    "impact": "PR #25166 was merged into NVIDIA cuDF main on November 16, 2026, addressing issue #24831.",
+    "features": [
+      "Correct null-aware Boolean AND and OR behavior",
+      "Existing bitwise operation behavior preserved",
+      "Scalar and reflected operation regression coverage",
+      "Boolean truth table cases and DataFrame filtering regression coverage"
+    ],
+    "technologies": {
+      "Language": "Python",
+      "Library": "NVIDIA cuDF, libcudf",
+      "Engineering": "Nullable Boolean semantics, regression testing, open source review"
+    },
+    "links": {
+      "caseStudy": "",
+      "github": "https://github.com/NVIDIA/cudf/pull/25166",
+      "live": ""
+    },
+    "images": []
+  },
+  {
+    "id": "biobase-cai",
+    "title": "BioBase | Codon Adaptation Index",
+    "summary": "Merged Python contribution implementing a scientific sequence analysis calculation.",
+    "description": "Implemented Codon Adaptation Index calculations for BioBase, handling DNA and RNA sequences, codon weights, stop codons, validation, and edge cases.",
+    "problem": "The library needed a tested Codon Adaptation Index implementation for sequence analysis.",
+    "role": "Open source contributor: implemented the calculation and unit tests.",
+    "impact": "PR #15 was merged into BioBase main on November 3, 2025, closing issue #11.",
+    "features": [
+      "Codon Adaptation Index using a geometric mean of codon weights",
+      "DNA and RNA input handling",
+      "Stop codon and incomplete input handling",
+      "Unit tests for normal, invalid, and edge case inputs"
+    ],
+    "technologies": {
+      "Language": "Python",
+      "Engineering": "Scientific computing, data validation, automated tests",
+      "Domain": "Sequence analysis, codon usage"
+    },
+    "links": {
+      "caseStudy": "",
+      "github": "https://github.com/lignum-vitae/biobase/pull/15",
+      "live": ""
+    },
+    "images": []
+  },
+  {
     "id": "smallbizzwizz",
     "title": "SmallBizzWizz",
     "summary": "A financial analytics platform for skilled nursing facilities.",
