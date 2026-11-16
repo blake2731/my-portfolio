@@ -54,41 +54,32 @@
   {
     "id": "smallbizzwizz",
     "title": "SmallBizzWizz",
-    "summary": "A financial analytics platform for skilled nursing facilities.",
-    "description": "SmallBizzWizz ingests facility spreadsheets, normalizes financial data, presents dashboard views, and supports AI-assisted business narratives.",
-    "problem": "Financial review workflows can depend on messy spreadsheet exports, manual cleanup, and repeated interpretation before leaders can act on the data.",
-    "role": "Founder and software engineer responsible for product direction, application architecture, data flow, and implementation.",
-    "impact": "Built to help operators move from manual financial review to faster, clearer decision support.",
+    "summary": "Public website scanner for local service businesses, focused on conversion path friction and actionable repairs.",
+    "description": "SmallBizzWizz scans a bounded set of public pages and reports observable issues with service request, booking, trust, tracking, mobile, and basic technical signals. Findings are translated into repair guidance without inventing conversion or revenue impact.",
+    "problem": "Local service businesses may lose contact and quote opportunities because public pages have unclear calls to action or other observable friction; private conversion rates cannot be inferred from public pages.",
+    "role": "Developer: AI assisted Next.js and TypeScript implementation, URL safety validation, bounded crawl logic, deterministic findings, and public proof fixtures.",
+    "impact": "Shipped an inspectable public scanner with reproducible synthetic before/after fixtures and explicit evidence limits. No real customer revenue improvement has been claimed.",
     "features": [
-      "Spreadsheet ingestion and validation",
-      "Financial data normalization",
-      "Dashboard views for operational review",
-      "Insight generation and AI-assisted business narratives",
-      "Authenticated user workflows"
+      "Normalize and check submitted public URLs and network targets",
+      "Use bounded redirects, timeouts, and public page fetching",
+      "Inspect likely contact, quote, and service pages for observable signals",
+      "Present source-backed findings and actionable repair guidance",
+      "Publish controlled validation fixtures and limitations"
     ],
     "technologies": {
-      "Frontend": "Next.js, TypeScript, React",
-      "Backend": "Node.js, Drizzle ORM, APIs",
-      "Database": "PostgreSQL, SQL",
-      "Product": "Clerk Auth, spreadsheet ingestion, financial dashboards, AI-assisted narratives"
+      "Frontend": "Next.js 16, React 19, TypeScript",
+      "Engineering": "URL validation, network safety checks, bounded crawl, deterministic scanning",
+      "Services": "Vercel, Clerk, Stripe"
     },
     "links": {
       "caseStudy": "index.html#smallbizzwizz-case-study",
-      "github": "",
-      "live": ""
+      "github": "https://github.com/blake2731/smallbizzwizz",
+      "live": "https://smallbizzwizz.com"
     },
     "linkTodos": [
-      "TODO: Add SmallBizzWizz live demo URL when public.",
-      "TODO: Add SmallBizzWizz GitHub repo URL if it can be shared.",
-      "TODO: Add real product screenshots when available."
+      "TODO: Add verified current product screenshots when available."
     ],
-    "images": [
-      "assets/images/smallbizzwizz-landing.png",
-      "assets/images/smallbizzwizz-main.png",
-      "assets/images/smallbizzwizz-exampleupload.png",
-      "assets/images/smallbizzwizz-chathistory.png",
-      "assets/images/smallbizzwizz-auth.png"
-    ]
+    "images": []
   },
   {
     "id": "crafty-brother-upload-tool",
