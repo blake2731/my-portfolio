@@ -81,12 +81,7 @@ function displayProjectGallery(project) {
     const images = project.images || [];
 
     if (!images.length) {
-        gallery.innerHTML = `
-            <div class="container missing-assets">
-                <p>Project screenshots are not in the repo yet.</p>
-                <!-- TODO: Add approved screenshots for ${escapeAttribute(project.title)} to assets/images and reference them in assets/data/projects.json. -->
-            </div>
-        `;
+        gallery.innerHTML = '';
         return;
     }
 
