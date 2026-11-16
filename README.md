@@ -1,4 +1,16 @@
-# README
+# Blake Schmitt | Software Engineering Portfolio
+
+Portfolio: https://blake2731.github.io/my-portfolio/
+
+## Verified open source contributions
+
+**NVIDIA cuDF**: [Merged PR #25166](https://github.com/NVIDIA/cudf/pull/25166), November 16, 2026. Corrected nullable Boolean AND and OR null propagation using existing libcudf null-aware logical operators, with regression coverage for scalar/reflected operations, truth tables, and filtering behavior.
+
+**BioBase**: [Merged PR #15](https://github.com/lignum-vitae/biobase/pull/15), November 3, 2025. Implemented Codon Adaptation Index calculation and tests for DNA/RNA input, validation, and edge cases.
+
+The site homepage now highlights the NVIDIA contribution, and the project directory contains dedicated entries for both merged PRs.
+
+## Portfolio implementation notes
 
 ## Portfolio Optimization - 2.5.2025
 
