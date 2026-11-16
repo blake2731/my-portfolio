@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Full stack software engineer building Next.js, TypeScript, AI, analytics, and automation tools.">
+    <meta name="description" content="Software engineer with a merged NVIDIA cuDF correctness contribution and hands-on Python, TypeScript, and automation projects.">
     <meta property="og:title" content="Blake Schmitt | Software Engineer">
     <meta property="og:description" content="Full stack software engineer building Next.js, TypeScript, AI, analytics, and automation tools.">
     <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
     <title>Blake Schmitt | Software Engineer</title>
 
     <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/index.css?v=smallbizz-polish">
+    <link rel="stylesheet" href="assets/css/index.css?v=open-source-20261116">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/all.min.css">
@@ -30,9 +30,10 @@
                     <p class="hero-value">
                         I turn messy operational workflows into structured products: spreadsheet ingestion, normalized data models, dashboards, and AI-assisted automation that helps teams act on business information faster.
                     </p>
-                    <p class="hero-trust">B.S. Computer Science, Summa Cum Laude, Next.js, TypeScript, PostgreSQL, Drizzle ORM, AI workflow automation.</p>
+                    <p class="hero-trust">Merged NVIDIA cuDF contributor | B.S. Computer Science, Summa Cum Laude | Python, Next.js, TypeScript</p>
                     <div class="hero-actions" aria-label="Primary links">
-                        <a class="btn btn-primary" href="#featured-projects">View Projects</a>
+                        <a class="btn btn-primary" href="#open-source">View Merged Contribution</a>
+                        <a class="btn btn-secondary" href="#featured-projects">View Projects</a>
                         <a class="btn btn-secondary" href="https://github.com/blake2731" target="_blank" rel="noopener noreferrer">View GitHub</a>
                         <a class="btn btn-secondary" href="#contact">Contact Me</a>
                         <!-- TODO: Add a resume PDF to the repo and enable a Download Resume CTA when the file exists. -->
@@ -70,6 +71,31 @@
                         <span style="height: 61%"></span>
                     </div>
                 </aside>
+            </div>
+        </section>
+
+        <section id="open-source" class="section contribution-section" aria-labelledby="contribution-title">
+            <div class="container">
+                <div class="contribution-panel">
+                    <div class="contribution-copy">
+                        <p class="section-label">Verified open source engineering</p>
+                        <h2 id="contribution-title">An upstream correctness fix merged into NVIDIA cuDF.</h2>
+                        <p>In November 2026, my contribution to NVIDIA's GPU DataFrame library was merged. It fixes null propagation in nullable Boolean AND and OR operations, where expressions such as <code>True | &lt;NA&gt;</code> and <code>False &amp; &lt;NA&gt;</code> previously produced the wrong result.</p>
+                        <p>The change reuses libcudf's existing null-aware logical operators and includes regression tests for truth tables, reflected and scalar operations, and the original DataFrame filtering failure.</p>
+                        <div class="contribution-actions">
+                            <a class="btn btn-primary" href="https://github.com/NVIDIA/cudf/pull/25166" target="_blank" rel="noopener noreferrer">Inspect merged PR #25166</a>
+                            <a class="btn btn-secondary" href="projects.html">See all engineering work</a>
+                        </div>
+                    </div>
+                    <div class="contribution-facts" aria-label="Contribution evidence">
+                        <p><span>Repository</span><strong>NVIDIA / cuDF</strong></p>
+                        <p><span>Status</span><strong>Merged to main</strong></p>
+                        <p><span>Date</span><strong>November 16, 2026</strong></p>
+                        <p><span>Issue</span><strong>#24831</strong></p>
+                        <p><span>Focus</span><strong>Correctness and regression testing</strong></p>
+                        <a class="text-link" href="https://github.com/lignum-vitae/biobase/pull/15" target="_blank" rel="noopener noreferrer">Also contributed to BioBase (merged PR #15)</a>
+                    </div>
+                </div>
             </div>
         </section>
 
